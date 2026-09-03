@@ -1,0 +1,1038 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native 日本語 新版 App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <section class="phone" aria-label="Native 日本語 新版 App">
+        <div class="app">
+          <section class="page active" data-page="home">
+            <div class="top-actions">
+              <button data-action="open-sheet" aria-label="通知">
+                <svg viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>
+                <i></i>
+              </button>
+            </div>
+            <nav class="home-cats" aria-label="首页分类">
+              <button class="active" data-go="home">首页</button>
+              <button data-go="course">等级</button>
+              <button data-go="scene">场景</button>
+              <button data-go="feature">特集</button>
+            </nav>
+
+            <article class="member-banner" data-go="membership">
+              <div class="member-copy">
+                <h2>解锁全部课程与播客</h2>
+                <button type="button">开通会员</button>
+              </div>
+              <div class="banner-art" aria-hidden="true">
+                <span class="shape plus red"></span>
+                <span class="shape dots left"></span>
+                <span class="shape button-line"></span>
+                <span class="shape rect"></span>
+                <span class="shape triangle"></span>
+                <span class="shape half"></span>
+                <span class="shape bezier"></span>
+                <span class="shape dots right"></span>
+                <span class="shape plus yellow"></span>
+              </div>
+            </article>
+
+            <article class="dashboard-card progress-overview">
+              <div class="ring"><b>42%</b></div>
+              <div class="progress-stat"><i>文</i><b>等级课程</b><strong>371</strong></div>
+              <div class="progress-stat"><i>会</i><b>场景课程</b><strong>38%</strong></div>
+              <div class="progress-stat"><i>声</i><b>播客精听</b><strong>12</strong></div>
+            </article>
+
+            <article class="today-card level-today">
+              <button class="see-all" data-go="course">开始学习 ›</button>
+              <div class="course-cover native-cover">N</div>
+              <div class="wide-copy">
+                <span>今日等级课程推荐</span>
+                <h3>Native等级之「まあまあ」主题课程</h3>
+                <p>学会日本人常用的模糊评价和自然回应。</p>
+              </div>
+              <button class="small-play" data-action="play">▶</button>
+            </article>
+
+            <article class="today-card scene-today">
+              <button class="see-all" data-go="scene">练习场景 ›</button>
+              <div class="course-cover cafe-cover">喫</div>
+              <div class="wide-copy">
+                <span>今日场景课程推荐</span>
+                <h3>カフェへ行きませんか</h3>
+                <p>邀请、点单、寒暄，一节课完成咖啡店会话。</p>
+              </div>
+              <button class="small-play" data-action="play">▶</button>
+            </article>
+
+            <article class="today-card feature-today">
+              <button class="see-all">查看特集 ›</button>
+              <div class="course-cover vocab-cover">AB</div>
+              <div class="wide-copy">
+                <span>今日特集推荐</span>
+                <h3>ABAB系词汇精选</h3>
+                <p>どきどき、わくわく、いらいら，一次掌握高频拟态词。</p>
+              </div>
+              <button class="small-play gold-play" data-action="play">▶</button>
+            </article>
+
+            <article class="today-card podcast-today">
+              <button class="see-all" data-go="podcast">节目列表 ›</button>
+              <div class="course-cover podcast-cover" aria-hidden="true"><i></i></div>
+              <div class="wide-copy">
+                <h3>今日播客</h3>
+                <p>日本の車生活について</p>
+                <small>通勤、停车、买车文化 · 14:20</small>
+              </div>
+              <button class="small-play blue-play" data-action="play">▶</button>
+            </article>
+          </section>
+
+          <section class="page" data-page="course">
+            <div class="top-actions">
+              <button data-action="open-sheet" aria-label="通知">
+                <svg viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>
+                <i></i>
+              </button>
+            </div>
+            <nav class="home-cats" aria-label="首页分类">
+              <button data-go="home">首页</button>
+              <button class="active" data-go="course">等级</button>
+              <button data-go="scene">场景</button>
+              <button data-go="feature">特集</button>
+            </nav>
+            <div class="page-title">
+              <div>
+                <h2>等级课程</h2>
+                <p>N5 到 Native，自然升级</p>
+              </div>
+            </div>
+
+            <div class="sort-bar" data-sort-target="level-sort-list">
+              <span>排序</span>
+              <button class="active" data-sort="default">推荐</button>
+              <button data-sort="total-desc">课程多</button>
+              <button data-sort="learned-desc">学习多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+
+            <article class="level-hero">
+              <div class="level-disc">N2</div>
+              <div>
+                <span>当前学习等级</span>
+                <h3>中高级表达训练</h3>
+                <p>重点训练自然表达、委婉语气和长句理解。</p>
+              </div>
+              <button data-action="play">继续</button>
+            </article>
+
+            <div class="level-tabs">
+              <button data-go="level-n5">N5</button><button data-go="level-n4">N4</button><button data-go="level-n3">N3</button><button data-go="level-n2" class="active">N2</button><button data-go="level-n1">N1</button><button data-go="level-native">Native</button>
+            </div>
+
+            <div class="level-grid" id="level-sort-list">
+              <article class="level-card done">
+                <b>N5</b><h3>零基础轻松开口</h3><p>111课 · 已完成 70</p><i><span style="width: 63%"></span></i>
+              </article>
+              <article class="level-card done">
+                <b>N4</b><h3>开启日常交流</h3><p>132课 · 已完成 98</p><i><span style="width: 74%"></span></i>
+              </article>
+              <article class="level-card" data-go="level-n3">
+                <b>N3</b><h3>实用会话提升</h3><p>208课 · 已完成 98</p><i><span style="width: 47%"></span></i>
+              </article>
+              <article class="level-card active" data-go="level-n2">
+                <b>N2</b><h3>各种场景表达进阶</h3><p>267课 · 已完成 0</p><i><span style="width: 0%"></span></i>
+              </article>
+              <article class="level-card locked" data-go="level-n1">
+                <b>N1</b><h3>高级理解</h3><p>88课 · 解锁后学习</p><i><span style="width: 8%"></span></i>
+              </article>
+              <article class="level-card native">
+                <b>Native</b><h3>真实语感</h3><p>主题表达 · まあまあ</p><i><span style="width: 18%"></span></i>
+              </article>
+            </div>
+
+            <div class="course-list level-lessons">
+              <article><span>01</span><div><h3>宿題をします</h3><p>ます形（します） · 播放 4</p></div><button>已完成</button></article>
+              <article><span>02</span><div><h3>学生です</h3><p>丁寧形（です） · 播放 3</p></div><button>已完成</button></article>
+              <article><span>03</span><div><h3>勉強する</h3><p>辞書形（する） · 播放 1</p></div><button>已完成</button></article>
+              <article><span>04</span><div><h3>掃除して</h3><p>て形（して） · 播放 2</p></div><button>已完成</button></article>
+              <article><span>05</span><div><h3>まあまあですね</h3><p>Native等级之「まあまあ」主题课程</p></div><button>学习中</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="level-n5">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="course" aria-label="返回等级课程">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>N5</h2><p>基础动词与礼貌表达</p></div>
+            </div>
+            <article class="level-list-head"><b>学习进度 70/111课</b><button data-action="play">全部播放</button></article>
+            <div class="sort-bar compact" data-sort-target="level-n5-lessons">
+              <span>排序</span>
+              <button class="active" data-sort="default">课序</button>
+              <button data-sort="unlearned-first">未学习</button>
+              <button data-sort="complete-first">已完成</button>
+              <button data-sort="plays-desc">播放多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+            <div class="old-level-list" id="level-n5-lessons">
+              <article><span>01</span><div><h3>宿題をします</h3><p>ます形（します）</p></div><em>▶ 4</em><button>已完成</button></article>
+              <article><span>02</span><div><h3>学生です</h3><p>丁寧形（です）</p></div><em>▶ 3</em><button>已完成</button></article>
+              <article><span>03</span><div><h3>勉強する</h3><p>辞書形（する）</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article><span>04</span><div><h3>掃除して</h3><p>て形（して）</p></div><em>▶ 2</em><button>已完成</button></article>
+              <article><span>05</span><div><h3>勉強しました</h3><p>た系（した・しました）</p></div><em>▶ 1</em><button>已完成</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="level-n4">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="course" aria-label="返回等级课程">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>N4</h2><p>可能形与日常表达</p></div>
+            </div>
+            <article class="level-list-head"><b>学习进度 1/132课</b><button data-action="play">全部播放</button></article>
+            <div class="sort-bar compact" data-sort-target="level-n4-lessons">
+              <span>排序</span>
+              <button class="active" data-sort="default">课序</button>
+              <button data-sort="unlearned-first">未学习</button>
+              <button data-sort="complete-first">已完成</button>
+              <button data-sort="plays-desc">播放多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+            <div class="old-level-list" id="level-n4-lessons">
+              <article><span>01</span><div><h3>日本語ができる</h3><p>できる</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>02</span><div><h3>予約できない</h3><p>できない</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>03</span><div><h3>準備ができている</h3><p>できている</p></div><em>▶ 1</em><button class="muted">未学习</button></article>
+              <article><span>04</span><div><h3>宿題ができていない</h3><p>できていない</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>05</span><div><h3>食べられる</h3><p>〜られる（可能）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="level-n3">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="course" aria-label="返回等级课程">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>N3</h2><p>实用会话与中级句型</p></div>
+            </div>
+            <article class="level-list-head"><b>学习进度 98/208课</b><button data-action="play">全部播放</button></article>
+            <div class="sort-bar compact" data-sort-target="level-n3-lessons">
+              <span>排序</span>
+              <button class="active" data-sort="default">课序</button>
+              <button data-sort="unlearned-first">未学习</button>
+              <button data-sort="complete-first">已完成</button>
+              <button data-sort="plays-desc">播放多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+            <div class="old-level-list" id="level-n3-lessons">
+              <article data-go="n3-lesson-detail"><span>01</span><div><h3>出来上がる</h3><p>〜上がる</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article><span>02</span><div><h3>三日がかり</h3><p>〜がかり</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>03</span><div><h3>信じがたい</h3><p>〜がたい</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>04</span><div><h3>走りきった</h3><p>〜きる</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>05</span><div><h3>食べきれない</h3><p>〜きれる</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="level-n2">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="course" aria-label="返回等级课程">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>N2</h2><p>高级句型与自然语气</p></div>
+            </div>
+            <article class="level-list-head"><b>学习进度 0/267课</b><button data-action="play">全部播放</button></article>
+            <div class="sort-bar compact" data-sort-target="level-n2-lessons">
+              <span>排序</span>
+              <button class="active" data-sort="default">课序</button>
+              <button data-sort="unlearned-first">未学习</button>
+              <button data-sort="complete-first">已完成</button>
+              <button data-sort="plays-desc">播放多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+            <div class="old-level-list" id="level-n2-lessons">
+              <article data-go="n2-lesson-detail"><span>01</span><div><h3>力の限り走る</h3><p>〜限り（限界）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>02</span><div><h3>担当である限りは</h3><p>〜限りは（状態）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>03</span><div><h3>私が確認した限りでは</h3><p>〜限りでは（範囲）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>04</span><div><h3>今日に限って</h3><p>〜に限って</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><span>05</span><div><h3>社員に限らず</h3><p>〜に限らず</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="level-native">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="course" aria-label="返回等级课程">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>Native</h2><p>真实语感与自然表达</p></div>
+            </div>
+            <article class="level-list-head"><b>学习进度 18/20课</b><button data-action="play">全部播放</button></article>
+            <div class="sort-bar compact" data-sort-target="level-native-lessons">
+              <span>排序</span>
+              <button class="active" data-sort="default">课序</button>
+              <button data-sort="unlearned-first">未学习</button>
+              <button data-sort="complete-first">已完成</button>
+              <button data-sort="plays-desc">播放多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+            <div class="old-level-list" id="level-native-lessons">
+              <article><span>01</span><div><h3>思いのほか早く終わりました</h3><p>文法</p></div><em>▶ 2</em><button>已完成</button></article>
+              <article><span>02</span><div><h3>何より静か</h3><p>文法</p></div><em>▶ 2</em><button>已完成</button></article>
+              <article><span>03</span><div><h3>何を言おうとも</h3><p>文法</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article><span>04</span><div><h3>親がいないのをいいことに</h3><p>文法</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article><span>05</span><div><h3>まあまあ</h3><p>表现</p></div><em>▶ 1</em><button class="muted">未学习</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="level-n1">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="course" aria-label="返回等级课程">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>N1</h2><p>高级表达与真实语气</p></div>
+            </div>
+            <article class="level-list-head"><b>学习进度 7/88课</b><button data-action="play">全部播放</button></article>
+            <div class="sort-bar compact" data-sort-target="level-n1-lessons">
+              <span>排序</span>
+              <button class="active" data-sort="default">课序</button>
+              <button data-sort="unlearned-first">未学习</button>
+              <button data-sort="complete-first">已完成</button>
+              <button data-sort="plays-desc">播放多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+            <div class="old-level-list" id="level-n1-lessons">
+              <article data-go="lesson-detail"><span>01</span><div><h3>言うまでもない</h3><p>〜までもない</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article><span>02</span><div><h3>おそらく大丈夫</h3><p>おそらく</p></div><em>▶ 5</em><button>已完成</button></article>
+              <article><span>03</span><div><h3>もしかしたら</h3><p>もしかしたら</p></div><em>▶ 3</em><button>已完成</button></article>
+              <article><span>04</span><div><h3>どうも変だ</h3><p>どうも</p></div><em>▶ 3</em><button>已完成</button></article>
+              <article><span>05</span><div><h3>言わずにはいられない</h3><p>〜ずにはいられない</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="lesson-detail">
+            <div class="page-title lesson-title">
+              <button class="round-btn" data-go="level-n1" aria-label="返回N1课程列表">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>课程详情</h2><p>N1 · 言うまでもない</p></div>
+              <button class="heart-btn" data-action="favorite-lesson" aria-label="收藏">♡</button>
+            </div>
+
+            <article class="lesson-summary-card">
+              <h3>言うまでもない</h3>
+              <p>没必要说</p>
+              <div class="lesson-tags"><span>~までもない</span><span>恋爱约会</span></div>
+              <div class="lesson-actions">
+                <span>▶ 已播放1</span>
+                <b>已完成</b>
+                <button data-action="play">▶ 播放课程</button>
+              </div>
+            </article>
+
+            <div class="dialogue-list">
+              <article class="bubble left">
+                <div class="speaker girl" aria-label="女性说话人"><img src="./assets/avatar-female.png" alt="" /></div>
+                <div>
+                  <h3>私のこと、本当に好き?</h3>
+                  <p>watashi nokoto, hontou ni suki?</p>
+                  <small>你真的喜欢我吗?</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+              </article>
+              <article class="bubble right">
+                <div>
+                  <h3>そんなの言うまでもないよ。</h3>
+                  <p>sonnano iu mademonaiyo.</p>
+                  <small>这还用说吗?</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+                <div class="speaker boy" aria-label="男性说话人"><img src="./assets/avatar-male.png" alt="" /></div>
+              </article>
+            </div>
+
+            <div class="lesson-bottom-actions">
+              <button data-go="level-n1">‹ 上一课</button>
+              <button data-action="toggle-complete">学习取消</button>
+              <button data-go="course">下一课 ›</button>
+            </div>
+          </section>
+
+          <section class="page" data-page="n3-lesson-detail">
+            <div class="page-title lesson-title">
+              <button class="round-btn" data-go="level-n3" aria-label="返回N3课程列表">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>课程详情</h2><p>N3 · 出来上がる</p></div>
+              <button class="heart-btn" data-action="favorite-lesson" aria-label="收藏">♡</button>
+            </div>
+
+            <article class="lesson-summary-card n3-summary-card">
+              <h3>出来上がる</h3>
+              <p>完成</p>
+              <div class="lesson-tags"><span>〜上がる</span><span>餐厅餐饮</span><span>N3</span></div>
+              <div class="lesson-actions">
+                <span>▶ 已播放1</span>
+                <b>已完成</b>
+                <button data-action="play">▶ 播放课程</button>
+              </div>
+            </article>
+
+            <div class="dialogue-list n3-dialogue-list">
+              <article class="bubble left">
+                <div class="speaker girl" aria-label="女性说话人"><img src="./assets/avatar-female.png" alt="" /></div>
+                <div>
+                  <h3>ケーキはできましたか?</h3>
+                  <small>蛋糕做好了吗?</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+              </article>
+              <article class="bubble right">
+                <div>
+                  <p>できあ</p>
+                  <h3>はい、出来上がりました。</h3>
+                  <small>是的，完成了。</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+                <div class="speaker girl" aria-label="女性说话人"><img src="./assets/avatar-female.png" alt="" /></div>
+              </article>
+              <article class="bubble left">
+                <div class="speaker girl" aria-label="女性说话人"><img src="./assets/avatar-female.png" alt="" /></div>
+                <div>
+                  <p>かお</p>
+                  <h3>わあ、いい香りですね。</h3>
+                  <small>哇，好香啊。</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="lesson-bottom-actions">
+              <button data-go="level-n3">‹ 上一课</button>
+              <button data-action="toggle-complete">学习取消</button>
+              <button data-go="level-n3">下一课 ›</button>
+            </div>
+          </section>
+
+          <section class="page" data-page="n2-lesson-detail">
+            <div class="page-title lesson-title">
+              <button class="round-btn" data-go="level-n2" aria-label="返回N2课程列表">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>课程详情</h2><p>N2 · 力の限り走る</p></div>
+              <button class="heart-btn" data-action="favorite-lesson" aria-label="收藏">♡</button>
+            </div>
+
+            <article class="lesson-summary-card n2-summary-card">
+              <h3>力の限り走る</h3>
+              <p>尽全力奔跑</p>
+              <div class="lesson-tags"><span>〜限り（限界）</span><span>健身运动</span><span>N2</span></div>
+              <div class="lesson-actions">
+                <span>▶ 已播放0</span>
+                <b class="muted-status">未学习</b>
+                <button data-action="play">▶ 播放课程</button>
+              </div>
+            </article>
+
+            <div class="dialogue-list n2-dialogue-list">
+              <article class="bubble left">
+                <div class="speaker boy" aria-label="男性说话人"><img src="./assets/avatar-male.png" alt="" /></div>
+                <div>
+                  <p>さいご　　はし</p>
+                  <h3>最後まで走れましたか。</h3>
+                  <small>跑到最后了吗?</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+              </article>
+              <article class="bubble right">
+                <div>
+                  <p>ちから　かぎ　はし</p>
+                  <h3>はい、力の限り走りました。</h3>
+                  <small>是的，我尽全力跑了。</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+                <div class="speaker girl" aria-label="女性说话人"><img src="./assets/avatar-female.png" alt="" /></div>
+              </article>
+              <article class="bubble left">
+                <div class="speaker boy" aria-label="男性说话人"><img src="./assets/avatar-male.png" alt="" /></div>
+                <div>
+                  <p>けっか</p>
+                  <h3>すばらしい結果ですね。</h3>
+                  <small>结果很棒呢。</small>
+                  <div><button data-action="play">▶ 播放</button><button>录音</button></div>
+                </div>
+              </article>
+            </div>
+
+            <div class="lesson-bottom-actions">
+              <button data-go="level-n2">‹ 上一课</button>
+              <button data-action="toggle-complete" class="complete">学习完成</button>
+              <button data-go="level-n2">下一课 ›</button>
+            </div>
+          </section>
+
+          <section class="page" data-page="scene">
+            <div class="top-actions">
+              <button data-action="open-sheet" aria-label="通知">
+                <svg viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>
+                <i></i>
+              </button>
+            </div>
+            <nav class="home-cats" aria-label="首页分类">
+              <button data-go="home">首页</button>
+              <button data-go="course">等级</button>
+              <button class="active" data-go="scene">场景</button>
+              <button data-go="feature">特集</button>
+            </nav>
+            <div class="page-title">
+              <div>
+                <h2>场景课程</h2>
+                <p>按真实生活场景练会话</p>
+              </div>
+            </div>
+
+            <div class="sort-bar" data-sort-target="scene-sort-list">
+              <span>排序</span>
+              <button class="active" data-sort="default">推荐</button>
+              <button data-sort="total-desc">课程多</button>
+              <button data-sort="learned-desc">学习多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+
+            <article class="scene-hero">
+              <span>今日推荐场景</span>
+              <h3>カフェへ行きませんか</h3>
+              <p>邀请朋友、点单、确认口味、自然结束对话。</p>
+              <button data-action="play">播放场景</button>
+            </article>
+
+            <div class="scene-list" id="scene-sort-list">
+              <article><i class="scene-illo icon-chat"></i><div><h3>基础沟通</h3><p>问候、确认、简单寒暄</p><span><b style="width:41%"></b></span></div><strong>进行中</strong><em>11/27课</em></article>
+              <article><i class="scene-illo icon-calendar"></i><div><h3>日常生活</h3><p>生活习惯、时间安排、邻里沟通</p><span><b style="width:38%"></b></span></div><strong>进行中</strong><em>23/60课</em></article>
+              <article><i class="scene-illo icon-social"></i><div><h3>社交聊天</h3><p>朋友聊天、回应、表达感受</p><span><b style="width:37%"></b></span></div><strong>进行中</strong><em>19/52课</em></article>
+              <article><i class="scene-illo icon-love"></i><div><h3>恋爱约会</h3><p>邀请、约会、自然推进话题</p><span><b style="width:47%"></b></span></div><strong>进行中</strong><em>8/17课</em></article>
+              <article><i class="scene-illo icon-family"></i><div><h3>家庭关系</h3><p>家人称呼、关心、家庭对话</p><span><b style="width:45%"></b></span></div><strong>进行中</strong><em>10/22课</em></article>
+              <article><i class="scene-illo icon-dining"></i><div><h3>餐厅餐饮</h3><p>预约、点餐、结账</p><span><b style="width:25%"></b></span></div><strong>进行中</strong><em>16/65课</em></article>
+              <article><i class="scene-illo icon-invest"></i><div><h3>投资理财</h3><p>账户、收益、咨询表达</p><span><b style="width:23%"></b></span></div><strong>进行中</strong><em>3/13课</em></article>
+              <article><i class="scene-illo icon-shopping"></i><div><h3>购物消费</h3><p>价格、退换、支付</p><span><b style="width:23%"></b></span></div><strong>进行中</strong><em>6/26课</em></article>
+              <article><i class="scene-illo icon-traffic"></i><div><h3>交通出行</h3><p>电车、巴士、打车、问路</p><span><b style="width:30%"></b></span></div><strong>进行中</strong><em>8/27课</em></article>
+              <article><i class="scene-illo icon-travel"></i><div><h3>旅行旅游</h3><p>酒店、景点、行程确认</p><span><b style="width:31%"></b></span></div><strong>进行中</strong><em>10/32课</em></article>
+              <article><i class="scene-illo icon-plane"></i><div><h3>机场航空</h3><p>值机、登机、行李托运</p><span><b style="width:25%"></b></span></div><strong>进行中</strong><em>4/16课</em></article>
+              <article><i class="scene-illo icon-hotel"></i><div><h3>酒店住宿</h3><p>入住、退房、设施咨询</p><span><b style="width:46%"></b></span></div><strong>进行中</strong><em>6/13课</em></article>
+              <article><i class="scene-illo icon-sidejob"></i><div><h3>副业创业</h3><p>项目、合作、线上业务</p><span><b style="width:43%"></b></span></div><strong>进行中</strong><em>6/14课</em></article>
+              <article><i class="scene-illo icon-neighbor"></i><div><h3>邻里关系</h3><p>邻居寒暄、噪音、互助</p><span><b style="width:33%"></b></span></div><strong>进行中</strong><em>4/12课</em></article>
+              <article><i class="scene-illo icon-rent"></i><div><h3>住房租房</h3><p>看房、合同、维修沟通</p><span><b style="width:40%"></b></span></div><strong>进行中</strong><em>8/20课</em></article>
+              <article><i class="scene-illo icon-medical"></i><div><h3>医疗健康</h3><p>挂号、问诊、拿药</p><span><b style="width:40%"></b></span></div><strong>进行中</strong><em>14/35课</em></article>
+              <article><i class="scene-illo icon-bank"></i><div><h3>银行金融</h3><p>开户、转账、咨询</p><span><b style="width:40%"></b></span></div><strong>进行中</strong><em>4/10课</em></article>
+              <article><i class="scene-illo icon-admin"></i><div><h3>行政手续</h3><p>住民票、保险、窗口</p><span><b style="width:56%"></b></span></div><strong>进行中</strong><em>9/16课</em></article>
+              <article><i class="scene-illo icon-school"></i><div><h3>学校教育</h3><p>报名、面谈、请假</p><span><b style="width:48%"></b></span></div><strong>进行中</strong><em>13/27课</em></article>
+              <article><i class="scene-illo icon-hobby"></i><div><h3>兴趣活动</h3><p>运动、社团、周末活动</p><span><b style="width:40%"></b></span></div><strong>进行中</strong><em>6/15课</em></article>
+              <article><i class="scene-illo icon-music"></i><div><h3>娱乐活动</h3><p>音乐、演出、休闲邀约</p><span><b style="width:29%"></b></span></div><strong>进行中</strong><em>8/28课</em></article>
+              <article><i class="scene-illo icon-pet"></i><div><h3>宠物相关</h3><p>宠物医院、寄养、用品</p><span><b style="width:38%"></b></span></div><strong>进行中</strong><em>5/13课</em></article>
+              <article><i class="scene-illo icon-digital"></i><div><h3>数字生活</h3><p>手机、网络、线上服务</p><span><b style="width:29%"></b></span></div><strong>进行中</strong><em>10/34课</em></article>
+              <article><i class="scene-illo icon-festival"></i><div><h3>节日聚会</h3><p>节日问候、聚餐、送礼</p><span><b style="width:36%"></b></span></div><strong>进行中</strong><em>4/11课</em></article>
+              <article><i class="scene-illo icon-child"></i><div><h3>儿童育儿</h3><p>托育、学校、亲子对话</p><span><b style="width:22%"></b></span></div><strong>进行中</strong><em>4/18课</em></article>
+              <article><i class="scene-illo icon-growth"></i><div><h3>学习成长</h3><p>学习计划、考试、复盘</p><span><b style="width:30%"></b></span></div><strong>进行中</strong><em>20/66课</em></article>
+              <article><i class="scene-illo icon-public"></i><div><h3>公共服务</h3><p>窗口、设施、社区服务</p><span><b style="width:31%"></b></span></div><strong>进行中</strong><em>5/16课</em></article>
+              <article><i class="scene-illo icon-weather"></i><div><h3>天气自然</h3><p>天气、自然灾害、季节</p><span><b style="width:32%"></b></span></div><strong>进行中</strong><em>11/34课</em></article>
+              <article><i class="scene-illo icon-news"></i><div><h3>新闻话题</h3><p>新闻讨论、观点表达</p><span><b style="width:46%"></b></span></div><strong>进行中</strong><em>6/13课</em></article>
+              <article><i class="scene-illo icon-eco"></i><div><h3>环保社会</h3><p>垃圾分类、环保、社会议题</p><span><b style="width:36%"></b></span></div><strong>进行中</strong><em>4/11课</em></article>
+              <article><i class="scene-illo icon-culture"></i><div><h3>宗教文化</h3><p>神社、寺庙、习俗文化</p><span><b style="width:44%"></b></span></div><strong>进行中</strong><em>4/9课</em></article>
+              <article><i class="scene-illo icon-alert"></i><div><h3>突发事件</h3><p>报警、求助、紧急说明</p><span><b style="width:44%"></b></span></div><strong>进行中</strong><em>8/18课</em></article>
+              <article><i class="scene-illo icon-fitness"></i><div><h3>健身运动</h3><p>健身房、运动、身体状态</p><span><b style="width:36%"></b></span></div><strong>进行中</strong><em>5/14课</em></article>
+              <article><i class="scene-illo icon-beauty"></i><div><h3>美容美发</h3><p>预约、美发、护理需求</p><span><b style="width:31%"></b></span></div><strong>进行中</strong><em>4/13课</em></article>
+              <article><i class="scene-illo icon-fashion"></i><div><h3>服装穿搭</h3><p>尺码、搭配、试穿</p><span><b style="width:17%"></b></span></div><strong>进行中</strong><em>2/12课</em></article>
+              <article><i class="scene-illo icon-job"></i><div><h3>求职转职</h3><p>简历、面试、入职沟通</p><span><b style="width:57%"></b></span></div><strong>进行中</strong><em>12/21课</em></article>
+              <article><i class="scene-illo icon-meeting"></i><div><h3>会议讨论</h3><p>会议发言、确认、推进</p><span><b style="width:41%"></b></span></div><strong>进行中</strong><em>14/34课</em></article>
+              <article><i class="scene-illo icon-work"></i><div><h3>职场沟通</h3><p>汇报、协商、跨部门沟通</p><span><b style="width:40%"></b></span></div><strong>进行中</strong><em>56/139课</em></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="membership">
+            <div class="page-title pay-title">
+              <button class="round-btn" data-go="home" aria-label="返回首页">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div>
+                <h2>开通会员</h2>
+                <p>解锁全部课程与后台畅听</p>
+              </div>
+            </div>
+
+            <div class="plan-list">
+              <button class="plan-card active">
+                <i></i>
+                <div><h3>1个月会员</h3><p>每天仅约0.5元</p></div>
+                <span><del>19元</del><b>15</b>元</span>
+              </button>
+              <button class="plan-card">
+                <i></i>
+                <div><h3>3个月会员</h3><p>每天仅约0.4元</p></div>
+                <span><del>45元</del><b>36</b>元</span>
+              </button>
+              <button class="plan-card">
+                <i></i>
+                <div><h3>6个月会员</h3><p>每天仅约0.37元</p></div>
+                <span><del>90元</del><b>66</b>元</span>
+              </button>
+              <button class="plan-card">
+                <i></i>
+                <div><h3>12个月会员</h3><p>每天仅约0.33元</p></div>
+                <span><del>180元</del><b>120</b>元</span>
+              </button>
+            </div>
+
+            <h3 class="pay-section-title">选择支付方式</h3>
+            <article class="pay-method">
+              <strong>Apple</strong>
+              <div><h3>Apple IAP购买订阅</h3><p>快速安全的 Apple IAP订阅</p></div>
+              <i></i>
+            </article>
+
+            <article class="pay-footer">
+              <p>应付金额 <b>¥15</b></p>
+              <button data-action="play" data-go="membership-success">立即开通</button>
+              <small>开通即表示同意《会员服务协议》</small>
+            </article>
+          </section>
+
+          <section class="page" data-page="membership-success">
+            <div class="page-title pay-title">
+              <button class="round-btn" data-go="home" aria-label="返回首页">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div>
+                <h2>开通成功</h2>
+                <p>会员权益已解锁</p>
+              </div>
+            </div>
+
+            <article class="pay-success-card">
+              <div class="success-mark">✓</div>
+              <span>Native日本語会员</span>
+              <h3>已开通 1 个月会员</h3>
+              <p>有效期至 2026-09-28，全部等级课程、场景课程、特集与播客现在可学习。</p>
+            </article>
+
+            <div class="success-benefits">
+              <article><i>全</i><div><h3>全部课程解锁</h3><p>N5 到 Native、场景、特集完整可学</p></div></article>
+              <article><i>声</i><div><h3>播客后台畅听</h3><p>真实语速内容持续更新</p></div></article>
+              <article><i>练</i><div><h3>学习进度同步</h3><p>收藏、完成状态和播放记录自动保存</p></div></article>
+            </div>
+
+            <div class="success-actions">
+              <button data-go="course">去学习</button>
+              <button data-go="home">返回首页</button>
+            </div>
+          </section>
+
+          <section class="page" data-page="podcast">
+            <div class="page-title">
+              <div>
+                <h2>播客</h2>
+                <p>参考日语播客体验，训练真实语速</p>
+              </div>
+            </div>
+            <article class="scene-hero podcast-hero">
+              <span>今日播客</span>
+              <h3>日本の車生活について</h3>
+              <p>通勤、停车、买车文化和地方生活差异。</p>
+              <button data-podcast="0">进入本期</button>
+            </article>
+            <div class="podcast-list">
+              <article data-podcast="0"><button>▶</button><div><h3>日本の車生活について</h3><p>通勤、停车、买车文化 · 14:20</p></div><span>Ep.89</span></article>
+              <article data-podcast="1"><button>▶</button><div><h3>コンビニの新商品、なぜ毎週出る?</h3><p>便利店新品文化 · 11:36</p></div><span>Ep.88</span></article>
+              <article data-podcast="2"><button>▶</button><div><h3>雨の日の過ごし方</h3><p>雨天生活表达 · 09:42</p></div><span>Ep.87</span></article>
+              <article data-podcast="3"><button>▶</button><div><h3>朝のカフェで聞こえる日本語</h3><p>点单、寒暄、座位确认 · 12:18</p></div><span>Ep.86</span></article>
+              <article data-podcast="4"><button>▶</button><div><h3>職場で使う「一応」と「念のため」</h3><p>职场缓冲语 · 15:04</p></div><span>Ep.85</span></article>
+              <article data-podcast="5"><button>▶</button><div><h3>週末、何してた?</h3><p>闲聊展开方式 · 10:55</p></div><span>Ep.84</span></article>
+              <article data-podcast="6"><button>▶</button><div><h3>病院で症状を説明する</h3><p>医疗场景表达 · 13:27</p></div><span>Ep.83</span></article>
+              <article data-podcast="7"><button>▶</button><div><h3>電車が遅れた時の会話</h3><p>交通延误说明 · 08:48</p></div><span>Ep.82</span></article>
+              <article data-podcast="8"><button>▶</button><div><h3>日本人のあいづち入門</h3><p>うん、へえ、なるほど · 16:11</p></div><span>Ep.81</span></article>
+              <article data-podcast="9"><button>▶</button><div><h3>スーパーでよく聞く店内放送</h3><p>购物听力训练 · 09:58</p></div><span>Ep.80</span></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="podcast-detail">
+            <div class="page-title podcast-detail-title">
+              <button class="round-btn" data-go="podcast" aria-label="返回播客">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div>
+                <h2 id="podcast-title">日本の車生活について</h2>
+                <p id="podcast-meta">Ep.89 · 14:20 · 真实语速</p>
+              </div>
+            </div>
+            <article class="podcast-detail-card">
+              <div class="podcast-art-large"><i></i></div>
+              <span id="podcast-topic">通勤、停车、买车文化</span>
+              <h3 id="podcast-jp">日本の車生活について</h3>
+              <p id="podcast-desc">围绕地方生活中的开车通勤、停车费、买车和日常用车习惯，训练自然速度下的关键词捕捉。</p>
+              <div class="audio-placeholder">
+                <button data-action="play">▶</button>
+                <div><b>音频待接入</b><small>之后可替换为真实音频源</small></div>
+              </div>
+            </article>
+            <div class="transcript-card">
+              <h3>本期学习重点</h3>
+              <p id="podcast-points">駐車場 / 通勤 / 車がないと不便 / 維持費 / 地方ではよくある</p>
+            </div>
+          </section>
+
+          <section class="page" data-page="feature">
+            <div class="top-actions">
+              <button data-action="open-sheet" aria-label="通知">
+                <svg viewBox="0 0 24 24"><path d="M10 21h4"/><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/></svg>
+                <i></i>
+              </button>
+            </div>
+            <nav class="home-cats" aria-label="首页分类">
+              <button data-go="home">首页</button>
+              <button data-go="course">等级</button>
+              <button data-go="scene">场景</button>
+              <button class="active" data-go="feature">特集</button>
+            </nav>
+            <div class="page-title">
+              <div>
+                <h2>特集</h2>
+                <p>主题式整理，集中突破表达</p>
+              </div>
+            </div>
+
+            <div class="sort-bar" data-sort-target="feature-sort-list">
+              <span>排序</span>
+              <button class="active" data-sort="default">推荐</button>
+              <button data-sort="total-desc">课程多</button>
+              <button data-sort="learned-desc">学习多</button>
+              <button data-sort="name-asc">名称</button>
+            </div>
+
+            <article class="scene-hero feature-hero">
+              <span>今日特集推荐</span>
+              <h3>ABAB系词汇精选</h3>
+              <p>どきどき、わくわく、いらいら，一次掌握高频拟态词。</p>
+              <button data-action="play">开始特集</button>
+            </article>
+
+            <div class="feature-list scene-list" id="feature-sort-list">
+              <article><i class="scene-illo icon-chat"></i><div><h3>ちょっと 特集</h3><p>暧昧拒绝、缓冲表达、真实语气</p><span><b style="width:52%"></b></span></div><strong>进行中</strong><em>12/23课</em></article>
+              <article><i class="scene-illo icon-growth"></i><div><h3>副词特集</h3><p>ちゃんと / せっかく / べつに</p><span><b style="width:38%"></b></span></div><strong>进行中</strong><em>8/21课</em></article>
+              <article><i class="scene-illo icon-festival"></i><div><h3>拟声拟态词</h3><p>ボカボカ / ウジウジ / わくわく</p><span><b style="width:45%"></b></span></div><strong>进行中</strong><em>9/20课</em></article>
+              <article><i class="scene-illo icon-work"></i><div><h3>Native职场会话</h3><p>汇报、确认、请求、拒绝</p><span><b style="width:34%"></b></span></div><strong>进行中</strong><em>11/32课</em></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="favorite">
+            <div class="page-title">
+              <div>
+                <h2>收藏</h2>
+                <p>今天优先复习这些内容</p>
+              </div>
+            </div>
+
+            <div class="review-card favorite-summary">
+              <div class="review-ring"><span data-favorite-count>8</span></div>
+              <div>
+                <span data-favorite-label>全部收藏课程</span>
+                <p data-favorite-desc>等级、场景、播客、特集都已按频道整理。</p>
+              </div>
+            </div>
+
+            <div class="favorite-filters">
+              <button class="active" data-favorite-filter="all">全部</button>
+              <button data-favorite-filter="level">等级</button>
+              <button data-favorite-filter="scene">场景</button>
+              <button data-favorite-filter="podcast">播客</button>
+              <button data-favorite-filter="feature">特集</button>
+            </div>
+
+            <div class="saved-list">
+              <article class="lesson-favorite-item" data-favorite-channel="level"><button>♥</button><div><small>等级</small><h3>言うまでもない</h3><p>没必要说 · N1</p></div><span>播放 1</span></article>
+              <article data-favorite-channel="level"><button>♥</button><div><small>等级</small><h3>予約できない</h3><p>不能预约 · N4</p></div><span>播放 0</span></article>
+              <article data-favorite-channel="level"><button>♥</button><div><small>等级</small><h3>宿題をしました</h3><p>做了作业 · N5</p></div><span>播放 1</span></article>
+              <article data-favorite-channel="scene"><button>♥</button><div><small>场景</small><h3>カフェへ行きませんか</h3><p>咖啡店邀请 · 基础沟通</p></div><span>播放 2</span></article>
+              <article data-favorite-channel="scene"><button>♥</button><div><small>场景</small><h3>病院で症状を説明する</h3><p>说明症状 · 医疗健康</p></div><span>播放 4</span></article>
+              <article data-favorite-channel="podcast"><button>♥</button><div><small>播客</small><h3>日本の車生活について</h3><p>通勤、停车、买车文化</p></div><span>14:20</span></article>
+              <article data-favorite-channel="feature"><button>♥</button><div><small>特集</small><h3>ABAB系词汇精选</h3><p>拟声拟态词</p></div><span>9/20课</span></article>
+              <article data-favorite-channel="feature"><button>♥</button><div><small>特集</small><h3>Native职场会话</h3><p>汇报、确认、请求、拒绝</p></div><span>11/32课</span></article>
+            </div>
+          </section>
+
+          <section class="page" data-page="profile">
+            <article class="profile-card">
+              <button class="profile-avatar" data-action="open-avatar" aria-label="选择头像" data-avatar="cat"><i class="avatar-illo avatar-cat"></i></button>
+              <div class="profile-main">
+                <h2>Native日本語 <button data-action="open-nickname" aria-label="编辑昵称">✎</button></h2>
+                <p>ID:26070617154012 <span>▣</span></p>
+                <div class="vip-row">
+                  <strong>永久会员</strong>
+                  <em>全课程永久解锁</em>
+                </div>
+              </div>
+            </article>
+
+            <article class="profile-progress">
+              <div><h3>学习进度</h3><b>371/1023课程</b></div>
+              <span><i style="width:36%"></i></span>
+            </article>
+
+            <div class="settings profile-settings">
+              <button data-go="security"><i>锁</i><span><b>安全中心</b><small>管理账号安全</small></span><em>›</em></button>
+              <button data-go="support"><i>☎</i><span><b>联系客服</b><small>有问题随时联系</small></span><em>›</em></button>
+              <button data-go="settings"><i>⚙</i><span><b>系统设置</b><small>通知、语言与播放设置</small></span><em>›</em></button>
+            </div>
+
+            <button class="logout-btn" data-action="logout">退出登录</button>
+          </section>
+
+          <section class="page" data-page="security">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="profile" aria-label="返回我的">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>安全中心</h2><p>账号信息与安全设置</p></div>
+            </div>
+            <h3 class="profile-section-title">账号信息</h3>
+            <div class="info-table">
+              <div><span>手机号</span><b>13758492327</b></div>
+              <div><span>邮箱</span><b>暂无</b></div>
+              <div><span>账号ID</span><b>26070617154012</b></div>
+              <div><span>注册时间</span><b>2026-07-06 17:15:38</b></div>
+            </div>
+            <h3 class="profile-section-title">安全设置</h3>
+            <div class="settings profile-settings compact">
+              <button><i>钥</i><span><b>修改登录密码</b><small>建议定期修改登录密码</small></span><em>›</em></button>
+            </div>
+            <h3 class="profile-section-title">危险操作</h3>
+            <div class="settings profile-settings compact danger">
+              <button><i>删</i><span><b>删除账号</b><small>永久删除所有数据</small></span><em>›</em></button>
+            </div>
+          </section>
+
+          <section class="page" data-page="support">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="profile" aria-label="返回我的">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>联系客服</h2><p>通过邮件反馈问题</p></div>
+            </div>
+            <article class="support-card">
+              <div>
+                <span>电子邮箱</span>
+                <b>native.japanese.app@gmail.com</b>
+              </div>
+              <button data-copy="native.japanese.app@gmail.com">复制</button>
+            </article>
+          </section>
+
+          <section class="page settings-page" data-page="settings">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="profile" aria-label="返回我的">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2>播放设置</h2><p>播放与字幕偏好</p></div>
+            </div>
+            <div class="option-panel">
+              <div class="option-head"><i></i><div><h3>播放速度</h3></div></div>
+              <div class="radio-grid settings-radio six"><button>0.5x</button><button>0.8x</button><button class="active">1.0x(默认)</button><button>1.25x</button><button>1.5x</button><button>2.0x</button></div>
+            </div>
+            <div class="option-panel">
+              <div class="option-head"><i></i><div><h3>播放顺序</h3></div></div>
+              <div class="radio-grid settings-radio two"><button class="active">顺序(默认)</button><button>随机</button></div>
+            </div>
+            <div class="option-panel">
+              <div class="option-head"><i></i><div><h3>播放次数(会话语音播放次数)</h3></div></div>
+              <div class="radio-grid settings-radio five"><button class="active">1次(默认)</button><button>2次</button><button>3次</button><button>4次</button><button>5次</button></div>
+            </div>
+            <div class="option-panel">
+              <div class="option-head"><i></i><div><h3>翻译文显示</h3></div></div>
+              <div class="radio-grid settings-radio two"><button class="active">开(默认)</button><button>关</button></div>
+            </div>
+            <div class="option-panel">
+              <div class="option-head"><i></i><div><h3>假名显示</h3></div></div>
+              <div class="radio-grid settings-radio two"><button class="active">开(默认)</button><button>关</button></div>
+            </div>
+            <div class="option-panel">
+              <div class="option-head"><i></i><div><h3>罗马音显示</h3></div></div>
+              <div class="radio-grid settings-radio two"><button>开(默认)</button><button class="active">关</button></div>
+            </div>
+          </section>
+
+          <section class="page auth-page" data-page="login">
+            <div class="auth-brand">
+              <i class="auth-logo"><b>N</b><span></span></i>
+              <h2>Native日本語</h2>
+              <p>轻松学习，稳步提升</p>
+            </div>
+            <div class="auth-tabs"><button class="active">手机号登录</button><button>邮箱登录</button></div>
+            <label>手机号<input placeholder="请输入手机号" /></label>
+            <label>密码<span><input placeholder="请输入密码" type="password" /><button aria-label="显示密码">显示</button></span></label>
+            <button class="auth-primary" data-go="home">登录</button>
+            <div class="auth-links"><button data-go="register">还没有账号？去注册</button><button data-go="forgot-password">忘记密码？</button></div>
+          </section>
+
+          <section class="page auth-page" data-page="register">
+            <div class="auth-brand">
+              <i class="auth-logo"><b>N</b><span></span></i>
+              <h2>Native日本語</h2>
+              <p>轻松学习，稳步提升</p>
+            </div>
+            <div class="auth-tabs"><button>手机号注册</button><button class="active">邮箱注册</button></div>
+            <label>邮箱<input placeholder="请输入邮箱地址" /></label>
+            <label>密码<span><input placeholder="请输入密码" type="password" /><button aria-label="显示密码">显示</button></span></label>
+            <label>验证码<div><input placeholder="请输入验证码" /><button data-go="verify-code-sent">获取验证码</button></div></label>
+            <button class="auth-primary" data-go="home">注册</button>
+            <div class="auth-links"><button data-go="login">已有账号？去登录</button><button data-go="forgot-password">忘记密码？</button></div>
+          </section>
+
+          <section class="page auth-page notice-page" data-page="verify-code-sent">
+            <div class="auth-brand">
+              <i class="auth-logo notice-logo"><b>码</b><span></span></i>
+              <h2>验证码已发送</h2>
+              <p>请查看邮箱或短信</p>
+            </div>
+            <article class="notice-card">
+              <strong>60秒内有效</strong>
+              <h3>验证码已经发送到你的账号</h3>
+              <p>如果暂时没有收到，请检查邮箱垃圾箱或确认手机号是否填写正确。</p>
+            </article>
+            <div class="success-actions">
+              <button data-go="register">返回注册</button>
+              <button data-go="login">去登录</button>
+            </div>
+          </section>
+
+          <section class="page auth-page notice-page" data-page="forgot-password">
+            <div class="auth-brand">
+              <i class="auth-logo notice-logo"><b>密</b><span></span></i>
+              <h2>找回密码</h2>
+              <p>通过验证码重设登录密码</p>
+            </div>
+            <label>手机号或邮箱<input placeholder="请输入手机号或邮箱" /></label>
+            <label>验证码<div><input placeholder="请输入验证码" /><button data-go="verify-code-sent">获取验证码</button></div></label>
+            <label>新密码<span><input placeholder="请输入新密码" type="password" /><button aria-label="显示密码">显示</button></span></label>
+            <button class="auth-primary" data-go="login">确认重设</button>
+            <div class="auth-links"><button data-go="login">返回登录</button><button data-go="register">去注册</button></div>
+          </section>
+        </div>
+
+        <nav class="tabbar">
+          <button class="active" data-nav="home">
+            <svg viewBox="0 0 24 24"><path d="M4 10.5 12 4l8 6.5V20a1 1 0 0 1-1 1h-5v-6h-4v6H5a1 1 0 0 1-1-1z"/></svg>
+            首页
+          </button>
+          <button data-nav="podcast">
+            <svg viewBox="0 0 24 24"><path d="M4 14v-2a8 8 0 0 1 16 0v2"/><path d="M4 14a2 2 0 0 1 2-2h1v7H6a2 2 0 0 1-2-2z"/><path d="M20 14a2 2 0 0 0-2-2h-1v7h1a2 2 0 0 0 2-2z"/></svg>
+            播客
+          </button>
+          <button data-nav="favorite">
+            <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+            收藏
+          </button>
+          <button data-nav="profile">
+            <svg viewBox="0 0 24 24"><path d="M20 21a8 8 0 0 0-16 0"/><circle cx="12" cy="7" r="4"/></svg>
+            我的
+          </button>
+        </nav>
+
+        <div class="sheet" aria-hidden="true">
+          <div>
+            <span>NOTICE</span>
+            <b>今日学习提醒</b>
+            <p>还有 2 个收藏句型建议复习，完成后会更新学习进度。</p>
+            <section>
+              <article><i>复</i><div><strong>收藏复习</strong><small>予約できない / 時間があれば</small></div></article>
+              <article><i>听</i><div><strong>播客精听</strong><small>日本の車生活について · 14:20</small></div></article>
+            </section>
+            <button data-action="close-sheet">知道了</button>
+          </div>
+        </div>
+
+        <div class="logout-modal" aria-hidden="true">
+          <div>
+            <b>退出登录</b>
+            <p>确定要退出当前账号吗？</p>
+            <div>
+              <button data-action="cancel-logout">取消</button>
+              <button data-action="confirm-logout">确认</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="nickname-modal" aria-hidden="true">
+          <div>
+            <b>修改昵称</b>
+            <input value="Native日本語" aria-label="昵称" />
+            <section>
+              <button data-action="close-nickname">取消</button>
+              <button data-action="close-nickname">保存</button>
+            </section>
+          </div>
+        </div>
+
+        <div class="avatar-modal" aria-hidden="true">
+          <div>
+            <header><b>选择头像</b><button data-action="close-avatar" aria-label="关闭">×</button></header>
+            <section class="avatar-grid">
+              <button class="active" data-avatar="cat" aria-label="小猫头像"><i class="avatar-illo avatar-cat"></i></button>
+              <button data-avatar="dog" aria-label="小狗头像"><i class="avatar-illo avatar-dog"></i></button>
+              <button data-avatar="rabbit" aria-label="小兔头像"><i class="avatar-illo avatar-rabbit"></i></button>
+              <button data-avatar="boy" aria-label="男孩头像"><i class="avatar-illo avatar-boy"></i></button>
+              <button data-avatar="girl" aria-label="女孩头像"><i class="avatar-illo avatar-girl"></i></button>
+              <button data-avatar="student" aria-label="学生头像"><i class="avatar-illo avatar-student"></i></button>
+              <button data-avatar="teacher" aria-label="老师头像"><i class="avatar-illo avatar-teacher"></i></button>
+              <button data-avatar="bear" aria-label="小熊头像"><i class="avatar-illo avatar-bear"></i></button>
+              <button data-avatar="fox" aria-label="狐狸头像"><i class="avatar-illo avatar-fox"></i></button>
+              <button data-avatar="bird" aria-label="小鸟头像"><i class="avatar-illo avatar-bird"></i></button>
+              <button data-avatar="chef" aria-label="料理头像"><i class="avatar-illo avatar-chef"></i></button>
+              <button data-avatar="traveler" aria-label="旅行头像"><i class="avatar-illo avatar-traveler"></i></button>
+              <button data-avatar="office" aria-label="职场头像"><i class="avatar-illo avatar-office"></i></button>
+              <button data-avatar="music" aria-label="音乐头像"><i class="avatar-illo avatar-music"></i></button>
+              <button data-avatar="star" aria-label="星星头像"><i class="avatar-illo avatar-star"></i></button>
+            </section>
+            <section class="modal-actions">
+              <button data-action="close-avatar">取消</button>
+              <button data-action="confirm-avatar">确定</button>
+            </section>
+          </div>
+        </div>
+
+        <div class="recording-modal" aria-hidden="true">
+          <div>
+            <i></i>
+            <b>正在录音</b>
+            <p>松开结束录音</p>
+            <span><em></em><em></em><em></em><em></em><em></em></span>
+          </div>
+        </div>
+
+        <div class="rating-modal" aria-hidden="true">
+          <div>
+            <span>使用体验</span>
+            <b>觉得 Native 日本语好用吗?</b>
+            <p>给一个评价，帮助我们继续优化课程和界面。</p>
+            <section class="rating-stars" aria-label="评价星级">
+              <button data-rating="1" aria-label="1星">★</button>
+              <button data-rating="2" aria-label="2星">★</button>
+              <button data-rating="3" aria-label="3星">★</button>
+              <button data-rating="4" aria-label="4星">★</button>
+              <button data-rating="5" aria-label="5星">★</button>
+            </section>
+            <button data-action="close-rating">稍后评价</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
