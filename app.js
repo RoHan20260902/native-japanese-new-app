@@ -10,6 +10,7 @@ const channelPages = ["home", "course", "scene", "feature"];
 let currentPage = "home";
 let interactionCount = 0;
 let ratingPromptShown = false;
+let noticeRead = false;
 
 try {
   ratingPromptShown = sessionStorage.getItem("nativeRatingPromptDone") === "true";
@@ -17,13 +18,48 @@ try {
   ratingPromptShown = false;
 }
 
+try {
+  noticeRead = sessionStorage.getItem("nativeNoticeRead") === "true";
+} catch {
+  noticeRead = false;
+}
+
+if (noticeRead) document.body.classList.add("notice-read");
+
 const podcasts = [
   {
     title: "日本の車生活について",
     meta: "Ep.89 · 14:20 · 真实语速",
     topic: "通勤、停车、买车文化",
     desc: "围绕地方生活中的开车通勤、停车费、买车和日常用车习惯，训练自然速度下的关键词捕捉。",
-    points: "駐車場 / 通勤 / 車がないと不便 / 維持費 / 地方ではよくある"
+    points: "〜について話す / 必要だと思う / 場所によって変わる / なくても生活できる / 〜かなと思う",
+    transcript: `こんにちは。
+
+Native日本語ラジオです。
+
+今日はですね……
+
+日本の車生活について、
+少し話してみたいと思います。
+
+みなさん、
+日本って車が必要だと思いますか？
+
+これ……
+
+実は住んでいる場所によって、
+答えが全然変わるんですよね。
+
+例えば東京。
+
+東京の場合はですね……
+
+正直、
+車がなくても生活できる人が多いです。
+
+電車が本当に便利なので、
+「車、なくてもいいかな」
+って思う人も多いんですよね。`
   },
   {
     title: "コンビニの新商品、なぜ毎週出る?",
@@ -121,7 +157,348 @@ navButtons.forEach((button) => {
 });
 
 goButtons.forEach((button) => {
-  button.addEventListener("click", () => setPage(button.dataset.go));
+  button.addEventListener("click", (event) => {
+    event.stopPropagation();
+    setPage(button.dataset.go);
+  });
+});
+
+let lastGrammarLevelPage = "course";
+const grammarMetaData = {
+  "ます形（します）": {
+    cn: "礼貌地表达动作",
+    nuance: "语感比较正式、稳妥，适合初次见面、课堂、服务场景。"
+  },
+  "丁寧形（です）": {
+    cn: "礼貌判断句",
+    nuance: "语气柔和、客气，是日常会话里最基础的礼貌表达。"
+  },
+  "辞書形（する）": {
+    cn: "做某事",
+    nuance: "辞书形更直接，常用于说明习惯、能力、规则或普通叙述。"
+  },
+  "て形（して）": {
+    cn: "连接动作、请求或状态",
+    nuance: "语感自然口语，用来把动作串起来，或者温和地提出请求。"
+  },
+  "た系（した・しました）": {
+    cn: "表示过去或完成",
+    nuance: "强调事情已经发生，口语里也常用来确认经验和结果。"
+  },
+  "できる": {
+    cn: "能够、会、可以完成",
+    nuance: "语感积极，强调能力、条件具备或事情可行。"
+  },
+  "できない": {
+    cn: "不能、不会、无法完成",
+    nuance: "比直接拒绝更客观，常用于说明能力或条件不允许。"
+  },
+  "できている": {
+    cn: "已经做好、准备好了",
+    nuance: "强调完成后的状态还持续着，听起来比较自然。"
+  },
+  "できていない": {
+    cn: "还没做好、尚未完成",
+    nuance: "比できない更像“进度未完成”，不是完全不可能。"
+  },
+  "〜られる（可能）": {
+    cn: "能够做某事",
+    nuance: "表达能力或条件允许，语气比直接说できる更贴近日语动词体系。"
+  },
+  "〜上がる": {
+    cn: "彻底完成、做完",
+    nuance: "带有“完成到一个状态”的感觉，比普通完成更有结果感。"
+  },
+  "〜がかり": {
+    cn: "花费某段时间",
+    nuance: "强调事情耗时较长，常带有“费了一番工夫”的感觉。"
+  },
+  "〜がたい": {
+    cn: "难以、很难做到",
+    nuance: "书面感较强，常用于心理上难以接受、相信或理解。"
+  },
+  "〜きる": {
+    cn: "彻底做完、做到最后",
+    nuance: "强调从头到尾完成，有坚持到底或完全耗尽的感觉。"
+  },
+  "〜きれる": {
+    cn: "能够完全做完",
+    nuance: "常和否定一起用，表示数量、程度超过了承受范围。"
+  },
+  "〜限り（限界）": {
+    cn: "在能力或范围的极限内",
+    nuance: "强调“尽可能做到最大程度”，语气有全力以赴的感觉。"
+  },
+  "〜限りは（状態）": {
+    cn: "只要处于某种状态",
+    nuance: "常用于责任、条件、立场，语气偏正式。"
+  },
+  "〜限りでは（範囲）": {
+    cn: "就某个范围来看",
+    nuance: "语气谨慎，表示结论只限于自己知道或确认的范围。"
+  },
+  "〜に限って": {
+    cn: "偏偏某时、唯独某对象",
+    nuance: "常带有意外、不巧或反常的语感。"
+  },
+  "〜に限らず": {
+    cn: "不限于、不只是",
+    nuance: "用于扩大范围，语气比だけでなく更正式。"
+  },
+  "文法": {
+    cn: "句型和表达结构",
+    nuance: "用于整理真实会话中反复出现的表达框架。"
+  },
+  "表现": {
+    cn: "自然表达和语气",
+    nuance: "重点不是字面意思，而是日本人实际怎么说更自然。"
+  },
+  "〜までもない": {
+    cn: "没必要特意做、不用说也明白",
+    nuance: "语气是“事情已经很明显，所以无需再说或再做”。"
+  },
+  "おそらく": {
+    cn: "大概、恐怕",
+    nuance: "比たぶん更书面、更谨慎，常用于预测或判断。"
+  },
+  "もしかしたら": {
+    cn: "也许、说不定",
+    nuance: "带有不确定和试探感，比たぶん把握更低。"
+  },
+  "どうも": {
+    cn: "总觉得、似乎",
+    nuance: "表达模糊的感觉或判断，常用于还没完全确定的情况。"
+  },
+  "〜ずにはいられない": {
+    cn: "忍不住要做",
+    nuance: "强调情绪或冲动强到无法控制。"
+  },
+  "思いのほか": {
+    cn: "出乎意料地、比想象中更",
+    nuance: "语气带有轻微惊讶，常用于结果比预期好、快、多或不同。"
+  }
+};
+
+const grammarExampleData = {
+  "ます形（します）": {
+    meaning: "表示礼貌地说明自己或他人的动作。",
+    examples: [
+      {
+        jp: "毎朝、日本語を勉強します。",
+        kana: "まいあさ、にほんごを べんきょうします。",
+        cn: "我每天早上学习日语。"
+      },
+      {
+        jp: "今日は宿題をします。",
+        kana: "きょうは しゅくだいをします。",
+        cn: "今天我要做作业。"
+      },
+      {
+        jp: "週末に部屋を掃除します。",
+        kana: "しゅうまつに へやを そうじします。",
+        cn: "周末我会打扫房间。"
+      }
+    ]
+  },
+  "できる": {
+    meaning: "表示能够做某事，或某件事可以实现。",
+    examples: [
+      {
+        jp: "私は少し日本語ができます。",
+        kana: "わたしは すこし にほんごができます。",
+        cn: "我会一点日语。"
+      },
+      {
+        jp: "このアプリで発音の練習ができます。",
+        kana: "このアプリで はつおんの れんしゅうができます。",
+        cn: "可以用这个 App 练习发音。"
+      },
+      {
+        jp: "明日なら時間ができます。",
+        kana: "あしたなら じかんができます。",
+        cn: "如果是明天的话，我会有时间。"
+      }
+    ]
+  },
+  "〜上がる": {
+    meaning: "表示动作彻底完成，结果已经形成。",
+    examples: [
+      {
+        jp: "レポートがやっと出来上がりました。",
+        kana: "レポートが やっと できあがりました。",
+        cn: "报告终于完成了。"
+      },
+      {
+        jp: "料理が出来上がったら呼んでください。",
+        kana: "りょうりが できあがったら よんでください。",
+        cn: "饭做好后请叫我。"
+      },
+      {
+        jp: "新しい教材が来週出来上がります。",
+        kana: "あたらしい きょうざいが らいしゅう できあがります。",
+        cn: "新的教材下周会完成。"
+      }
+    ]
+  },
+  "〜限り（限界）": {
+    meaning: "表示在能力、体力或范围的最大限度内。",
+    examples: [
+      {
+        jp: "力の限り走りました。",
+        kana: "ちからの かぎり はしりました。",
+        cn: "我用尽全力跑了。"
+      },
+      {
+        jp: "できる限り早く返事します。",
+        kana: "できるかぎり はやく へんじします。",
+        cn: "我会尽可能早点回复。"
+      },
+      {
+        jp: "時間の許す限り練習を続けます。",
+        kana: "じかんの ゆるすかぎり れんしゅうを つづけます。",
+        cn: "只要时间允许，我会继续练习。"
+      }
+    ]
+  },
+  "思いのほか": {
+    meaning: "表示结果比自己预想的更出乎意料。",
+    examples: [
+      {
+        jp: "試験は思いのほか簡単でした。",
+        kana: "しけんは おもいのほか かんたんでした。",
+        cn: "考试出乎意料地简单。"
+      },
+      {
+        jp: "新しい仕事には思いのほか早く慣れました。",
+        kana: "あたらしい しごとには おもいのほか はやく なれました。",
+        cn: "我出乎意料地很快适应了新工作。"
+      },
+      {
+        jp: "この店は思いのほか静かで、勉強しやすいです。",
+        kana: "このみせは おもいのほか しずかで、べんきょうしやすいです。",
+        cn: "这家店出乎意料地安静，很适合学习。"
+      }
+    ]
+  },
+  "〜までもない": {
+    meaning: "表示“没有必要特意做某事 / 不用说也明白”。",
+    examples: [
+      {
+        jp: "彼が優秀なのは、言うまでもない。",
+        kana: "かれが ゆうしゅうなのは、いうまでもない。",
+        cn: "他很优秀，这不用说。"
+      },
+      {
+        jp: "そんな簡単なことは、説明するまでもない。",
+        kana: "そんな かんたんなことは、せつめいするまでもない。",
+        cn: "那么简单的事情，没有必要说明。"
+      },
+      {
+        jp: "結果を見れば、誰が努力したかは聞くまでもない。",
+        kana: "けっかをみれば、だれがどりょくしたかは きくまでもない。",
+        cn: "看结果就知道谁努力了，没必要再问。"
+      }
+    ]
+  }
+};
+
+function normalizeGrammarText(value) {
+  return value.trim().replace(/^~/, "〜");
+}
+
+function getGrammarMeta(grammar, title) {
+  const normalized = normalizeGrammarText(grammar);
+  return grammarMetaData[normalized] || {
+    cn: title,
+    nuance: "该语法的语感说明准备中，后续可补充更完整解释。"
+  };
+}
+
+function getGrammarLevelInfo(list) {
+  const page = list.closest(".page");
+  return {
+    pageName: page?.dataset.page || "course",
+    level: page?.querySelector(".page-title h2")?.textContent.trim() || "等级"
+  };
+}
+
+function renderGrammarExamples(grammar, level) {
+  const normalized = normalizeGrammarText(grammar);
+  const data = grammarExampleData[normalized] || {
+    meaning: "该语法的例句内容准备中。",
+    examples: [
+      { jp: `${normalized} を使った例文を準備中です。`, kana: "れいぶんを じゅんびちゅうです。", cn: "这个语法的例句正在准备中。" }
+    ]
+  };
+  document.querySelector("#grammar-example-title").textContent = normalized;
+  document.querySelector("#grammar-example-subtitle").textContent = `${level} · 例句练习`;
+  document.querySelector("#grammar-example-pattern").textContent = normalized;
+  document.querySelector("#grammar-example-meaning").textContent = data.meaning;
+  const exampleList = document.querySelector("#grammar-example-list");
+  exampleList.innerHTML = data.examples.map((example, index) => `
+    <article>
+      <span>${String(index + 1).padStart(2, "0")}</span>
+      <div>
+        <h3>${example.jp}</h3>
+        <p>${example.kana}</p>
+        <small>${example.cn}</small>
+      </div>
+      <button data-action="play">▶</button>
+    </article>
+  `).join("");
+  setPage("grammar-examples");
+}
+
+function renderGrammarList(sourceList, selectedGrammar) {
+  const { pageName, level } = getGrammarLevelInfo(sourceList);
+  lastGrammarLevelPage = pageName;
+  const grammarItems = Array.from(sourceList.querySelectorAll("article")).map((item, index) => ({
+    order: String(index + 1).padStart(2, "0"),
+    title: item.querySelector("h3")?.textContent.trim() || "课程",
+    grammar: normalizeGrammarText(item.querySelector("p")?.textContent.trim() || ""),
+    status: parseSortMeta(item, index).isUnlearned ? "unlearned" : "learned",
+    recent: String(100 - index)
+  })).filter((item) => item.grammar);
+
+  document.querySelector("#grammar-list-title").textContent = `${level} 语法列表`;
+  document.querySelector("#grammar-list-subtitle").textContent = `来自 ${level} 课程主题`;
+  document.querySelector("#grammar-list-current").textContent = `${level} 高频语法`;
+
+  const topicList = document.querySelector("#grammar-topic-list");
+  topicList.innerHTML = grammarItems.map((item) => `
+    <article data-grammar="${item.grammar}" data-level="${level}" data-status="${item.status}" data-recent="${item.recent}">
+      <span>${item.order}</span>
+      <div>
+        <h3>${item.grammar}</h3>
+        <p>${getGrammarMeta(item.grammar, item.title).cn}</p>
+        <small>${getGrammarMeta(item.grammar, item.title).nuance}</small>
+      </div>
+      <button>例句 ›</button>
+    </article>
+  `).join("");
+
+  topicList.querySelectorAll("article").forEach((item) => {
+    item.addEventListener("click", () => renderGrammarExamples(item.dataset.grammar, item.dataset.level));
+  });
+
+  setPage("level-grammar-list");
+  if (selectedGrammar) {
+    const selected = Array.from(topicList.querySelectorAll("article")).find((item) => item.dataset.grammar === normalizeGrammarText(selectedGrammar));
+    selected?.classList.add("active");
+  }
+}
+
+document.querySelectorAll(".old-level-list article p").forEach((grammarTag) => {
+  grammarTag.addEventListener("click", (event) => {
+    event.stopPropagation();
+    const sourceList = grammarTag.closest(".old-level-list");
+    if (!sourceList) return;
+    renderGrammarList(sourceList, grammarTag.textContent);
+  });
+});
+
+document.querySelector("[data-action='grammar-back']")?.addEventListener("click", () => {
+  setPage(lastGrammarLevelPage);
 });
 
 function closeRatingPrompt() {
@@ -160,6 +537,12 @@ document.querySelector("[data-action='close-rating']")?.addEventListener("click"
 
 document.querySelectorAll("[data-action='open-sheet']").forEach((button) => {
   button.addEventListener("click", () => {
+    document.body.classList.add("notice-read");
+    try {
+      sessionStorage.setItem("nativeNoticeRead", "true");
+    } catch {
+      noticeRead = true;
+    }
     sheet.classList.add("open");
     sheet.setAttribute("aria-hidden", "false");
   });
@@ -216,8 +599,9 @@ function parseSortMeta(item, index) {
   const playsText = text.match(/▶\s*(\d+)|播放\s*(\d+)/);
   const percentText = item.querySelector("i span")?.style.width?.match(/(\d+)/);
   const statusButton = item.querySelector("button");
-  const isUnlearned = statusButton?.classList.contains("muted") || text.includes("未学习");
-  const isComplete = text.includes("已完成") && !isUnlearned;
+  const status = item.dataset.status || "";
+  const isUnlearned = status === "unlearned" || statusButton?.classList.contains("muted") || text.includes("未学习");
+  const isComplete = status === "learned" || (text.includes("已完成") && !isUnlearned);
 
   return {
     index,
@@ -225,12 +609,126 @@ function parseSortMeta(item, index) {
     total: slash ? Number(slash[2]) : totalText ? Number(totalText[1]) : 0,
     learned: slash ? Number(slash[1]) : learnedText ? Number(learnedText[1]) : percentText ? Number(percentText[1]) : 0,
     plays: playsText ? Number(playsText[1] || playsText[2]) : 0,
+    recent: Number(item.dataset.recent || (index < 2 ? 100 - index : 30 - index)),
     isUnlearned,
     isComplete
   };
 }
 
+const sortLabels = {
+  default: "推荐顺序",
+  "unlearned-first": "未学习优先",
+  "recent-desc": "最近学习",
+  "name-asc": "五十音顺",
+  "total-desc": "课程多到少",
+  "learned-desc": "学习多到少"
+};
+
+const filterLabels = {
+  all: "全部",
+  unlearned: "未学习",
+  learned: "已学习"
+};
+
+function normalizeSortButton(button) {
+  if (!button) return;
+  const type = button.dataset.sort || "default";
+  button.textContent = sortLabels[type] || button.textContent.trim();
+}
+
+function ensureListTools(bar) {
+  if (bar.dataset.toolsReady === "true") return;
+  bar.dataset.toolsReady = "true";
+  bar.classList.add("list-tools");
+
+  const activeType = bar.querySelector("[data-sort].active")?.dataset.sort || "default";
+  const availableSorts = ["default", "unlearned-first", "recent-desc", "name-asc"];
+  const sortButtons = availableSorts.map((type) => {
+    const button = document.createElement("button");
+    button.dataset.sort = type;
+    button.textContent = sortLabels[type];
+    if (type === activeType || (type === "default" && !availableSorts.includes(activeType))) button.classList.add("active");
+    return button;
+  });
+  sortButtons.forEach(normalizeSortButton);
+
+  const sortMenu = document.createElement("div");
+  sortMenu.className = "tool-menu sort-menu";
+  sortButtons.forEach((button) => sortMenu.appendChild(button));
+
+  const filterMenu = document.createElement("div");
+  filterMenu.className = "tool-menu filter-menu";
+  [
+    ["all", "全部"],
+    ["unlearned", "未学习"],
+    ["learned", "已学习"]
+  ].forEach(([value, label], index) => {
+    const button = document.createElement("button");
+    button.dataset.filter = value;
+    button.textContent = label;
+    if (index === 0) button.classList.add("active");
+    filterMenu.appendChild(button);
+  });
+
+  bar.textContent = "";
+  bar.dataset.filter = "all";
+  bar.dataset.sort = availableSorts.includes(activeType) ? activeType : "default";
+  const filterTrigger = document.createElement("span");
+  filterTrigger.className = "tool-trigger";
+  filterTrigger.dataset.tool = "filter";
+  filterTrigger.textContent = "筛选";
+  const sortTrigger = document.createElement("span");
+  sortTrigger.className = "tool-trigger";
+  sortTrigger.dataset.tool = "sort";
+  sortTrigger.textContent = "排序";
+  const chips = document.createElement("div");
+  chips.className = "tool-chips";
+
+  bar.append(filterTrigger, sortTrigger, filterMenu, sortMenu, chips);
+}
+
+function updateToolChips(bar) {
+  const chips = bar.querySelector(".tool-chips");
+  if (!chips) return;
+  const filterType = bar.dataset.filter || "all";
+  const sortType = bar.dataset.sort || "default";
+  const filterText = filterLabels[filterType] || "全部";
+  const sortText = sortLabels[sortType] || "推荐顺序";
+  chips.innerHTML = `
+    ${filterType === "all" ? "" : `<button data-clear-filter>${filterText} ×</button>`}
+    <span>排序：${sortText}</span>
+  `;
+}
+
+function applyListTools(bar, sortableItems) {
+  const list = document.getElementById(bar.dataset.sortTarget);
+  if (!list) return;
+  const items = sortableItems || Array.from(list.children).map((item, index) => ({
+    item,
+    meta: parseSortMeta(item, index)
+  }));
+  const filterType = bar.dataset.filter || "all";
+  const sortType = bar.dataset.sort || "default";
+
+  const sorted = [...items].sort((a, b) => {
+    if (sortType === "total-desc") return b.meta.total - a.meta.total || a.meta.index - b.meta.index;
+    if (sortType === "learned-desc") return b.meta.learned - a.meta.learned || a.meta.index - b.meta.index;
+    if (sortType === "unlearned-first") return Number(b.meta.isUnlearned) - Number(a.meta.isUnlearned) || a.meta.index - b.meta.index;
+    if (sortType === "recent-desc") return b.meta.recent - a.meta.recent || a.meta.index - b.meta.index;
+    if (sortType === "name-asc") return a.meta.title.localeCompare(b.meta.title, "ja") || a.meta.index - b.meta.index;
+    return a.meta.index - b.meta.index;
+  });
+
+  sorted.forEach(({ item, meta }) => {
+    const visible = filterType === "all" || (filterType === "unlearned" && meta.isUnlearned) || (filterType === "learned" && meta.isComplete);
+    item.hidden = !visible;
+    list.appendChild(item);
+  });
+  updateToolChips(bar);
+}
+
 document.querySelectorAll(".sort-bar").forEach((bar) => {
+  ensureListTools(bar);
   const list = document.getElementById(bar.dataset.sortTarget);
   if (!list) return;
 
@@ -239,44 +737,51 @@ document.querySelectorAll(".sort-bar").forEach((bar) => {
     meta: parseSortMeta(item, index)
   }));
 
-  const sortLabel = bar.querySelector("span");
-  const activeButton = bar.querySelector("button.active");
-  if (sortLabel && activeButton) sortLabel.textContent = `排序：${activeButton.textContent.trim()}`;
+  const activeSort = bar.querySelector("[data-sort].active") || bar.querySelector("[data-sort='default']");
+  if (activeSort) bar.dataset.sort = activeSort.dataset.sort || "default";
+  applyListTools(bar, sortableItems);
 
   bar.addEventListener("click", (event) => {
     event.stopPropagation();
-    if (event.target === bar || event.target === sortLabel) bar.classList.toggle("open");
-  });
+    const trigger = event.target.closest(".tool-trigger");
+    const sortButton = event.target.closest("[data-sort]");
+    const filterButton = event.target.closest("[data-filter]");
+    const clearFilter = event.target.closest("[data-clear-filter]");
 
-  bar.querySelectorAll("button").forEach((button) => {
-    button.addEventListener("click", () => {
-      if (!bar.classList.contains("open")) {
-        bar.classList.add("open");
-        return;
-      }
+    if (trigger) {
+      bar.classList.toggle(`open-${trigger.dataset.tool}`);
+      bar.classList.remove(trigger.dataset.tool === "filter" ? "open-sort" : "open-filter");
+      return;
+    }
 
-      const sortType = button.dataset.sort;
-      const sorted = [...sortableItems].sort((a, b) => {
-        if (sortType === "total-desc") return b.meta.total - a.meta.total || a.meta.index - b.meta.index;
-        if (sortType === "learned-desc") return b.meta.learned - a.meta.learned || a.meta.index - b.meta.index;
-        if (sortType === "unlearned-first") return Number(b.meta.isUnlearned) - Number(a.meta.isUnlearned) || a.meta.index - b.meta.index;
-        if (sortType === "complete-first") return Number(b.meta.isComplete) - Number(a.meta.isComplete) || a.meta.index - b.meta.index;
-        if (sortType === "plays-desc") return b.meta.plays - a.meta.plays || a.meta.index - b.meta.index;
-        if (sortType === "name-asc") return a.meta.title.localeCompare(b.meta.title, "zh-Hans-u-co-pinyin") || a.meta.index - b.meta.index;
-        return a.meta.index - b.meta.index;
-      });
+    if (clearFilter) {
+      bar.dataset.filter = "all";
+      bar.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("active", item.dataset.filter === "all"));
+      applyListTools(bar);
+      return;
+    }
 
-      bar.querySelectorAll("button").forEach((item) => item.classList.remove("active"));
-      button.classList.add("active");
-      if (sortLabel) sortLabel.textContent = `排序：${button.textContent.trim()}`;
-      bar.classList.remove("open");
-      sorted.forEach(({ item }) => list.appendChild(item));
-    });
+    if (filterButton) {
+      bar.dataset.filter = filterButton.dataset.filter || "all";
+      bar.querySelectorAll("[data-filter]").forEach((item) => item.classList.toggle("active", item === filterButton));
+      bar.classList.remove("open-filter");
+      applyListTools(bar);
+      return;
+    }
+
+    if (sortButton) {
+      bar.dataset.sort = sortButton.dataset.sort || "default";
+      bar.querySelectorAll("[data-sort]").forEach((item) => item.classList.toggle("active", item === sortButton));
+      bar.classList.remove("open-sort");
+      applyListTools(bar);
+    }
   });
 });
 
 document.addEventListener("click", () => {
-  document.querySelectorAll(".sort-bar.open").forEach((bar) => bar.classList.remove("open"));
+  document.querySelectorAll(".sort-bar.open-filter, .sort-bar.open-sort").forEach((bar) => {
+    bar.classList.remove("open-filter", "open-sort");
+  });
 });
 
 const favoriteLabels = {
@@ -337,6 +842,7 @@ document.querySelectorAll("[data-podcast]").forEach((item) => {
     document.querySelector("#podcast-topic").textContent = podcast.topic;
     document.querySelector("#podcast-desc").textContent = podcast.desc;
     document.querySelector("#podcast-points").textContent = podcast.points;
+    document.querySelector("#podcast-transcript").textContent = podcast.transcript || "字幕内容准备中。";
     setPage("podcast-detail");
   });
 });

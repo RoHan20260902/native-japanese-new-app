@@ -45,11 +45,52 @@
               </div>
             </article>
 
-            <article class="dashboard-card progress-overview">
-              <div class="ring"><b>42%</b></div>
-              <div class="progress-stat"><i>文</i><b>等级课程</b><strong>371</strong></div>
-              <div class="progress-stat"><i>会</i><b>场景课程</b><strong>38%</strong></div>
-              <div class="progress-stat"><i>声</i><b>播客精听</b><strong>12</strong></div>
+            <article class="dashboard-card progress-overview study-overview">
+              <div class="growth-identity">
+                <div class="growth-avatar" aria-hidden="true">
+                  <b>文</b>
+                  <i></i>
+                </div>
+                <div class="growth-copy">
+                  <span>Native Level</span>
+                  <strong>Lv.12</strong>
+                  <h3>语法新星</h3>
+                  <p>连续学习 <b>48天</b> · 累计学习 <b>523课</b></p>
+                </div>
+              </div>
+
+              <div class="growth-xp">
+                <div><span style="width:72%"></span></div>
+                <p>再学习 7 课升级到 Lv.13</p>
+              </div>
+
+              <div class="growth-ring-panel" aria-label="我的日语成长">
+                <div class="growth-ring-head">
+                  <h3>我的日语成长</h3>
+                  <span>Learning Growth</span>
+                </div>
+
+                <div class="growth-rings">
+                  <section class="growth-ring-card ring-level">
+                    <div class="growth-ring" style="--angle:162deg">
+                      <div><strong>45%</strong><span>等级课程</span></div>
+                    </div>
+                    <p>371 / 826课</p>
+                  </section>
+                  <section class="growth-ring-card ring-scene">
+                    <div class="growth-ring" style="--angle:65deg">
+                      <div><strong>18%</strong><span>场景表达</span></div>
+                    </div>
+                    <p>112 / 615课</p>
+                  </section>
+                  <section class="growth-ring-card ring-feature">
+                    <div class="growth-ring" style="--angle:151deg">
+                      <div><strong>42%</strong><span>特集精听</span></div>
+                    </div>
+                    <p>40 / 96课</p>
+                  </section>
+                </div>
+              </div>
             </article>
 
             <article class="today-card level-today">
@@ -161,7 +202,7 @@
             </div>
 
             <div class="course-list level-lessons">
-              <article><span>01</span><div><h3>宿題をします</h3><p>ます形（します） · 播放 4</p></div><button>已完成</button></article>
+              <article><mark class="new-badge">NEW</mark><span>01</span><div><h3>宿題をします</h3><p>ます形（します） · 播放 4</p></div><button>已完成</button></article>
               <article><span>02</span><div><h3>学生です</h3><p>丁寧形（です） · 播放 3</p></div><button>已完成</button></article>
               <article><span>03</span><div><h3>勉強する</h3><p>辞書形（する） · 播放 1</p></div><button>已完成</button></article>
               <article><span>04</span><div><h3>掃除して</h3><p>て形（して） · 播放 2</p></div><button>已完成</button></article>
@@ -186,7 +227,7 @@
               <button data-sort="name-asc">名称</button>
             </div>
             <div class="old-level-list" id="level-n5-lessons">
-              <article><span>01</span><div><h3>宿題をします</h3><p>ます形（します）</p></div><em>▶ 4</em><button>已完成</button></article>
+              <article><mark class="new-badge">NEW</mark><span>01</span><div><h3>宿題をします</h3><p>ます形（します）</p></div><em>▶ 4</em><button>已完成</button></article>
               <article><span>02</span><div><h3>学生です</h3><p>丁寧形（です）</p></div><em>▶ 3</em><button>已完成</button></article>
               <article><span>03</span><div><h3>勉強する</h3><p>辞書形（する）</p></div><em>▶ 1</em><button>已完成</button></article>
               <article><span>04</span><div><h3>掃除して</h3><p>て形（して）</p></div><em>▶ 2</em><button>已完成</button></article>
@@ -211,7 +252,7 @@
               <button data-sort="name-asc">名称</button>
             </div>
             <div class="old-level-list" id="level-n4-lessons">
-              <article><span>01</span><div><h3>日本語ができる</h3><p>できる</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article><mark class="new-badge">NEW</mark><span>01</span><div><h3>日本語ができる</h3><p>できる</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>02</span><div><h3>予約できない</h3><p>できない</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>03</span><div><h3>準備ができている</h3><p>できている</p></div><em>▶ 1</em><button class="muted">未学习</button></article>
               <article><span>04</span><div><h3>宿題ができていない</h3><p>できていない</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
@@ -236,7 +277,7 @@
               <button data-sort="name-asc">名称</button>
             </div>
             <div class="old-level-list" id="level-n3-lessons">
-              <article data-go="n3-lesson-detail"><span>01</span><div><h3>出来上がる</h3><p>〜上がる</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article data-go="n3-lesson-detail"><mark class="new-badge">NEW</mark><span>01</span><div><h3>出来上がる</h3><p>〜上がる</p></div><em>▶ 1</em><button>已完成</button></article>
               <article><span>02</span><div><h3>三日がかり</h3><p>〜がかり</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>03</span><div><h3>信じがたい</h3><p>〜がたい</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>04</span><div><h3>走りきった</h3><p>〜きる</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
@@ -261,7 +302,7 @@
               <button data-sort="name-asc">名称</button>
             </div>
             <div class="old-level-list" id="level-n2-lessons">
-              <article data-go="n2-lesson-detail"><span>01</span><div><h3>力の限り走る</h3><p>〜限り（限界）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
+              <article data-go="n2-lesson-detail"><mark class="new-badge">NEW</mark><span>01</span><div><h3>力の限り走る</h3><p>〜限り（限界）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>02</span><div><h3>担当である限りは</h3><p>〜限りは（状態）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>03</span><div><h3>私が確認した限りでは</h3><p>〜限りでは（範囲）</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
               <article><span>04</span><div><h3>今日に限って</h3><p>〜に限って</p></div><em>▶ 0</em><button class="muted">未学习</button></article>
@@ -286,7 +327,7 @@
               <button data-sort="name-asc">名称</button>
             </div>
             <div class="old-level-list" id="level-native-lessons">
-              <article><span>01</span><div><h3>思いのほか早く終わりました</h3><p>文法</p></div><em>▶ 2</em><button>已完成</button></article>
+              <article><mark class="new-badge">NEW</mark><span>01</span><div><h3>思いのほか早く終わりました</h3><p>思いのほか</p></div><em>▶ 2</em><button>已完成</button></article>
               <article><span>02</span><div><h3>何より静か</h3><p>文法</p></div><em>▶ 2</em><button>已完成</button></article>
               <article><span>03</span><div><h3>何を言おうとも</h3><p>文法</p></div><em>▶ 1</em><button>已完成</button></article>
               <article><span>04</span><div><h3>親がいないのをいいことに</h3><p>文法</p></div><em>▶ 1</em><button>已完成</button></article>
@@ -311,7 +352,7 @@
               <button data-sort="name-asc">名称</button>
             </div>
             <div class="old-level-list" id="level-n1-lessons">
-              <article data-go="lesson-detail"><span>01</span><div><h3>言うまでもない</h3><p>〜までもない</p></div><em>▶ 1</em><button>已完成</button></article>
+              <article data-go="lesson-detail"><mark class="new-badge">NEW</mark><span>01</span><div><h3>言うまでもない</h3><p>〜までもない</p></div><em>▶ 1</em><button>已完成</button></article>
               <article><span>02</span><div><h3>おそらく大丈夫</h3><p>おそらく</p></div><em>▶ 5</em><button>已完成</button></article>
               <article><span>03</span><div><h3>もしかしたら</h3><p>もしかしたら</p></div><em>▶ 3</em><button>已完成</button></article>
               <article><span>04</span><div><h3>どうも変だ</h3><p>どうも</p></div><em>▶ 3</em><button>已完成</button></article>
@@ -365,6 +406,40 @@
               <button data-action="toggle-complete">学习取消</button>
               <button data-go="course">下一课 ›</button>
             </div>
+          </section>
+
+          <section class="page" data-page="level-grammar-list">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-action="grammar-back" aria-label="返回课程列表">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2 id="grammar-list-title">N1 语法列表</h2><p id="grammar-list-subtitle">选择语法查看例句</p></div>
+            </div>
+            <article class="grammar-list-hero">
+              <span>Grammar Index</span>
+              <h3 id="grammar-list-current">N1 高频语法</h3>
+              <p>从课程主题进入同等级语法列表，再查看对应例句。</p>
+            </article>
+            <div class="sort-bar compact" data-sort-target="grammar-topic-list">
+              <span>排序</span>
+              <button class="active" data-sort="default">推荐</button>
+            </div>
+            <div class="grammar-topic-list" id="grammar-topic-list"></div>
+          </section>
+
+          <section class="page" data-page="grammar-examples">
+            <div class="page-title sub-title">
+              <button class="round-btn" data-go="level-grammar-list" aria-label="返回语法列表">
+                <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+              </button>
+              <div><h2 id="grammar-example-title">〜までもない</h2><p id="grammar-example-subtitle">N1 · 例句练习</p></div>
+            </div>
+            <article class="grammar-example-hero">
+              <span>例句</span>
+              <h3 id="grammar-example-pattern">〜までもない</h3>
+              <p id="grammar-example-meaning">表示“没有必要特意做某事 / 不用说也明白”。</p>
+            </article>
+            <div class="grammar-example-list" id="grammar-example-list"></div>
           </section>
 
           <section class="page" data-page="n3-lesson-detail">
@@ -516,7 +591,7 @@
             </article>
 
             <div class="scene-list" id="scene-sort-list">
-              <article><i class="scene-illo icon-chat"></i><div><h3>基础沟通</h3><p>问候、确认、简单寒暄</p><span><b style="width:41%"></b></span></div><strong>进行中</strong><em>11/27课</em></article>
+              <article><mark class="new-badge">NEW</mark><i class="scene-illo icon-chat"></i><div><h3>基础沟通</h3><p>问候、确认、简单寒暄</p><span><b style="width:41%"></b></span></div><strong>进行中</strong><em>11/27课</em></article>
               <article><i class="scene-illo icon-calendar"></i><div><h3>日常生活</h3><p>生活习惯、时间安排、邻里沟通</p><span><b style="width:38%"></b></span></div><strong>进行中</strong><em>23/60课</em></article>
               <article><i class="scene-illo icon-social"></i><div><h3>社交聊天</h3><p>朋友聊天、回应、表达感受</p><span><b style="width:37%"></b></span></div><strong>进行中</strong><em>19/52课</em></article>
               <article><i class="scene-illo icon-love"></i><div><h3>恋爱约会</h3><p>邀请、约会、自然推进话题</p><span><b style="width:47%"></b></span></div><strong>进行中</strong><em>8/17课</em></article>
@@ -649,7 +724,7 @@
               <button data-podcast="0">进入本期</button>
             </article>
             <div class="podcast-list">
-              <article data-podcast="0"><button>▶</button><div><h3>日本の車生活について</h3><p>通勤、停车、买车文化 · 14:20</p></div><span>Ep.89</span></article>
+              <article data-podcast="0"><mark class="new-badge">NEW</mark><button>▶</button><div><h3>日本の車生活について</h3><p>通勤、停车、买车文化 · 14:20</p></div><span>Ep.89</span></article>
               <article data-podcast="1"><button>▶</button><div><h3>コンビニの新商品、なぜ毎週出る?</h3><p>便利店新品文化 · 11:36</p></div><span>Ep.88</span></article>
               <article data-podcast="2"><button>▶</button><div><h3>雨の日の過ごし方</h3><p>雨天生活表达 · 09:42</p></div><span>Ep.87</span></article>
               <article data-podcast="3"><button>▶</button><div><h3>朝のカフェで聞こえる日本語</h3><p>点单、寒暄、座位确认 · 12:18</p></div><span>Ep.86</span></article>
@@ -667,24 +742,56 @@
               <button class="round-btn" data-go="podcast" aria-label="返回播客">
                 <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
               </button>
-              <div>
-                <h2 id="podcast-title">日本の車生活について</h2>
-                <p id="podcast-meta">Ep.89 · 14:20 · 真实语速</p>
-              </div>
+              <h2>播客详情</h2>
             </div>
+            <article class="podcast-player-card">
+              <div class="audio-placeholder podcast-audio-bar">
+                <button data-action="play">▶</button>
+                <div>
+                  <b id="podcast-title">日本の車生活について</b>
+                  <small id="podcast-meta">Ep.89 · 14:20 · 真实语速</small>
+                </div>
+              </div>
+              <div class="podcast-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+            </article>
             <article class="podcast-detail-card">
-              <div class="podcast-art-large"><i></i></div>
               <span id="podcast-topic">通勤、停车、买车文化</span>
               <h3 id="podcast-jp">日本の車生活について</h3>
               <p id="podcast-desc">围绕地方生活中的开车通勤、停车费、买车和日常用车习惯，训练自然速度下的关键词捕捉。</p>
-              <div class="audio-placeholder">
-                <button data-action="play">▶</button>
-                <div><b>音频待接入</b><small>之后可替换为真实音频源</small></div>
-              </div>
             </article>
-            <div class="transcript-card">
+            <div class="transcript-card podcast-subtitle-card">
+              <h3>字幕</h3>
+              <p id="podcast-transcript">こんにちは。
+
+Native日本語ラジオです。
+
+今日はですね……
+
+日本の車生活について、
+少し話してみたいと思います。
+
+みなさん、
+日本って車が必要だと思いますか？
+
+これ……
+
+実は住んでいる場所によって、
+答えが全然変わるんですよね。
+
+例えば東京。
+
+東京の場合はですね……
+
+正直、
+車がなくても生活できる人が多いです。
+
+電車が本当に便利なので、
+「車、なくてもいいかな」
+って思う人も多いんですよね。</p>
+            </div>
+            <div class="transcript-card podcast-points-card">
               <h3>本期学习重点</h3>
-              <p id="podcast-points">駐車場 / 通勤 / 車がないと不便 / 維持費 / 地方ではよくある</p>
+              <p id="podcast-points">〜について話す / 必要だと思う / 場所によって変わる / なくても生活できる / 〜かなと思う</p>
             </div>
           </section>
 
@@ -724,7 +831,7 @@
             </article>
 
             <div class="feature-list scene-list" id="feature-sort-list">
-              <article><i class="scene-illo icon-chat"></i><div><h3>ちょっと 特集</h3><p>暧昧拒绝、缓冲表达、真实语气</p><span><b style="width:52%"></b></span></div><strong>进行中</strong><em>12/23课</em></article>
+              <article><mark class="new-badge">NEW</mark><i class="scene-illo icon-chat"></i><div><h3>ちょっと 特集</h3><p>暧昧拒绝、缓冲表达、真实语气</p><span><b style="width:52%"></b></span></div><strong>进行中</strong><em>12/23课</em></article>
               <article><i class="scene-illo icon-growth"></i><div><h3>副词特集</h3><p>ちゃんと / せっかく / べつに</p><span><b style="width:38%"></b></span></div><strong>进行中</strong><em>8/21课</em></article>
               <article><i class="scene-illo icon-festival"></i><div><h3>拟声拟态词</h3><p>ボカボカ / ウジウジ / わくわく</p><span><b style="width:45%"></b></span></div><strong>进行中</strong><em>9/20课</em></article>
               <article><i class="scene-illo icon-work"></i><div><h3>Native职场会话</h3><p>汇报、确认、请求、拒绝</p><span><b style="width:34%"></b></span></div><strong>进行中</strong><em>11/32课</em></article>
@@ -839,7 +946,7 @@
               <button class="round-btn" data-go="profile" aria-label="返回我的">
                 <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
               </button>
-              <div><h2>播放设置</h2><p>播放与字幕偏好</p></div>
+              <div><h2>系统设置</h2><p>播放与字幕偏好</p></div>
             </div>
             <div class="option-panel">
               <div class="option-head"><i></i><div><h3>播放速度</h3></div></div>
@@ -946,12 +1053,13 @@
 
         <div class="sheet" aria-hidden="true">
           <div>
-            <span>NOTICE</span>
-            <b>今日学习提醒</b>
-            <p>还有 2 个收藏句型建议复习，完成后会更新学习进度。</p>
+            <span>NEW LESSONS</span>
+            <b>新课程上架</b>
+            <p>等级、场景、特集各新增 1 节课程，今天可以直接开始学习。</p>
             <section>
-              <article><i>复</i><div><strong>收藏复习</strong><small>予約できない / 時間があれば</small></div></article>
-              <article><i>听</i><div><strong>播客精听</strong><small>日本の車生活について · 14:20</small></div></article>
+              <article><mark class="new-badge">NEW</mark><i>等</i><div><strong>等级课程</strong><small>〜てもいいですか · 请求许可表达</small></div></article>
+              <article><mark class="new-badge">NEW</mark><i>场</i><div><strong>场景课程</strong><small>コンビニで支払いをする · 支付与确认</small></div></article>
+              <article><mark class="new-badge">NEW</mark><i>特</i><div><strong>特集课程</strong><small>日本人のあいづち · 自然回应训练</small></div></article>
             </section>
             <button data-action="close-sheet">知道了</button>
           </div>
