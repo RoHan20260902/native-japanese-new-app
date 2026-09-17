@@ -2175,7 +2175,7 @@
       },
       {
         "selector": "[data-go=\"course\"]",
-        "title": "继续学习",
+        "title": "浏览课程",
         "desc": "点击进入「等级频道」。",
         "query": "[data-page=\"membership\"] [data-go=\"course\"]",
         "rect": {
