@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=learning-state-48" />
+    <link rel="stylesheet" href="./styles.css?v=member-home-49" />
   </head>
   <body>
     <main class="stage">
@@ -30,13 +30,13 @@
             <article class="member-banner" data-go="membership">
               <div class="member-copy">
                 <span class="member-kicker" data-member-free>未开通会员</span>
-                <span class="member-kicker" data-member-paid>Native Pass</span>
+                <span class="member-kicker" data-member-paid>学习进行时</span>
                 <h2 data-member-free>解锁全部课程与播客</h2>
-                <h2 data-member-paid>会员权益已生效</h2>
+                <h2 data-member-paid>继续学习</h2>
                 <p data-member-free>开通后可学习 N5 到 NT、场景、特集与播客内容。</p>
-                <p data-member-paid>全课程已开放，继续按学习进度复习。</p>
+                <p data-member-paid data-resume-summary>选择一节课程，开始今天的学习。</p>
                 <button type="button" data-member-free>开通会员</button>
-                <button type="button" data-member-paid>查看权益</button>
+                <button type="button" data-member-paid>继续学习</button>
               </div>
               <div class="banner-art" aria-hidden="true">
                 <span class="shape plus red"></span>
@@ -934,8 +934,8 @@ Native日本語ラジオです。
                 <h2>Native日本語 <button data-action="open-nickname" aria-label="编辑昵称">✎</button></h2>
                 <p>ID:26070617154012 <span>▣</span></p>
                 <div class="vip-row">
-                  <strong data-member-paid>永久会员</strong>
-                  <em data-member-paid>全课程永久解锁</em>
+                  <strong data-member-paid data-go="membership" role="button" tabindex="0" aria-label="打开会员中心" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click()}">会员中心 ›</strong>
+                  <em data-member-paid>永久会员 · 查看权益</em>
                   <strong class="free" data-member-free data-go="membership">开通会员</strong>
                   <em data-member-free>当前为试听体验</em>
                 </div>
@@ -1317,6 +1317,6 @@ Native日本語ラジオです。
       </section>
     </main>
 
-    <script src="./app.js?v=course-access-47"></script>
+    <script src="./app.js?v=member-home-49"></script>
   </body>
 </html>

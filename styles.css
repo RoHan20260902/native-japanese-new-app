@@ -9616,3 +9616,9 @@ body[data-member="paid"] .member-banner button {
   border-radius: inherit;
   background: linear-gradient(90deg, #43c915, #ffe019, #2b8cff);
 }
+
+/* Membership details are accessed from the profile. */
+.vip-row strong[data-member-paid][data-go] { cursor: pointer; }
+.vip-row strong[data-member-paid][data-go]:focus-visible { outline: 3px solid #2388ff; outline-offset: 3px; }
+
+body[data-member="paid"] .member-banner .member-kicker { display: none; }

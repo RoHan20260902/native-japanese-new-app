@@ -7,6 +7,7 @@ if(s.setup==='grammar'){await p.evaluate(()=>setPage('lesson-detail'));await sel
 if(s.setup==='learning-toggle'){const button=sel('[data-page="'+s.page+'"] [data-action="toggle-complete"]');await button.click();await button.evaluate(e=>e.scrollIntoView({block:'center',behavior:'instant'}))}
 if(s.setup==='podcast')await p.evaluate(()=>openPodcastDetail(0));
 if(s.setup==='success')await p.evaluate(()=>{setMembershipActive(true);setPage('membership-success')});
+if(s.setup==='resume')await p.evaluate(()=>{setMembershipActive(true);setPage('lesson-detail');setPage('home')});
 if(s.setup==='paid')await p.evaluate(()=>setMembershipActive(true));
 const actions={notice:'open-sheet',rules:'open-level-rules',logout:'logout',nickname:'open-nickname',avatar:'open-avatar'};
 if(actions[s.setup])await sel('[data-page="'+s.page+'"] [data-action="'+actions[s.setup]+'"]').click();

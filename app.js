@@ -16,6 +16,7 @@ let interactionCount = 0;
 let ratingPromptShown = false;
 let noticeRead = false;
 let memberActive = false;
+let lastLearningPage = null;
 const FREE_LEVEL_LESSON_LIMIT = 3;
 const FREE_PODCAST_LIMIT = 3;
 const DETAIL_FONT_STORAGE_KEY = "nativeDetailFontSize";
@@ -70,6 +71,14 @@ try {
   applyDetailFontSize("medium");
 }
 
+function updateMemberLearningEntry() {
+  const banner = document.querySelector('.member-banner');
+  if (banner) banner.dataset.go = memberActive ? (lastLearningPage || 'course') : 'membership';
+  const summary = document.querySelector('[data-resume-summary]');
+  const lesson = lastLearningPage && document.querySelector('[data-page="' + lastLearningPage + '"] .lesson-title p');
+  if (summary) summary.textContent = lesson ? '上次学习：' + lesson.textContent.trim() : '选择一节课程，开始今天的学习。';
+}
+
 function applyMembershipState() {
   document.body.dataset.member = memberActive ? "paid" : "free";
   document.querySelectorAll("[data-member-paid]").forEach((item) => {
@@ -78,6 +87,12 @@ function applyMembershipState() {
   document.querySelectorAll("[data-member-free]").forEach((item) => {
     item.hidden = memberActive;
   });
+  updateMemberLearningEntry();
+  const back = document.querySelector('[data-page="membership"] .page-title .round-btn');
+  if (back) {
+    back.dataset.go = memberActive ? 'profile' : 'home';
+    back.setAttribute('aria-label', memberActive ? '返回我的' : '返回首页');
+  }
   applyFreeLevelLessonAccess();
   applyFreePodcastAccess();
 }
@@ -371,6 +386,10 @@ function setPage(name) {
   });
 
   currentPage = name;
+  if (['lesson-detail', 'n3-lesson-detail', 'n2-lesson-detail'].includes(name)) {
+    lastLearningPage = name;
+    updateMemberLearningEntry();
+  }
 }
 
 function openLevelPlayback(button) {
