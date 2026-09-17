@@ -1,0 +1,1233 @@
+[
+  {
+    "id": "home",
+    "page": "home",
+    "title": "首页",
+    "group": "学习入口",
+    "annotations": [
+      {
+        "selector": "[data-action=\"open-sheet\"]",
+        "title": "通知",
+        "desc": "点击打开「通知」抽屉，并清除红点。"
+      },
+      {
+        "selector": ".home-cats",
+        "title": "频道切换",
+        "desc": "点击切换「首页 / 等级 / 场景 / 特集」。"
+      },
+      {
+        "selector": ".member-banner button[data-member-free]",
+        "title": "开通会员",
+        "desc": "点击打开「会员购买」界面。"
+      },
+      {
+        "selector": ".current-level-title",
+        "title": "等级说明",
+        "desc": "点击查看「日语学习等级制度」。"
+      },
+      {
+        "selector": "GLOBAL .tabbar",
+        "title": "底部导航",
+        "desc": "点击切换「首页 / 播客 / 收藏 / 我的」。"
+      },
+      {
+        "selector": ".level-today .see-all",
+        "title": "开始学习",
+        "desc": "点击进入「等级频道」。"
+      },
+      {
+        "selector": ".scene-today .see-all",
+        "title": "练习场景",
+        "desc": "点击进入「场景频道」。"
+      },
+      {
+        "selector": ".podcast-today .see-all",
+        "title": "节目列表",
+        "desc": "点击进入「播客列表」。"
+      },
+      {
+        "selector": ".level-today .small-play",
+        "title": "推荐内容播放",
+        "desc": "点击播放对应推荐内容的音频。"
+      },
+      {
+        "selector": ".feature-today .see-all",
+        "title": "查看特集",
+        "desc": "点击进入「特集频道」。"
+      },
+      {
+        "selector": ".feature-today .small-play",
+        "title": "特集内容播放",
+        "desc": "点击播放对应特集内容的音频。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "course",
+    "page": "course",
+    "title": "等级频道",
+    "group": "学习入口",
+    "annotations": [
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".level-card",
+        "title": "选择等级",
+        "desc": "点击等级卡，进入对应的等级课程列表。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "scene",
+    "page": "scene",
+    "title": "场景频道",
+    "group": "学习入口",
+    "annotations": [
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": "[data-go=\"scene-basic\"]",
+        "title": "基础沟通",
+        "desc": "点击进入「基础沟通」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "feature",
+    "page": "feature",
+    "title": "特集频道",
+    "group": "学习入口",
+    "annotations": [
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": "[data-go=\"feature-adverbs\"]",
+        "title": "副词特集",
+        "desc": "点击进入「副词特集」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "level-n5",
+    "page": "level-n5",
+    "title": "N5 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "返回",
+        "desc": "点击返回「等级频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "level-n4",
+    "page": "level-n4",
+    "title": "N4 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "返回",
+        "desc": "点击返回「等级频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "level-n3",
+    "page": "level-n3",
+    "title": "N3 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "返回",
+        "desc": "点击返回「等级频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".old-level-list article[data-go] h3",
+        "title": "课程详情",
+        "desc": "点击课程标题，进入「N3 课程详情」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "level-n2",
+    "page": "level-n2",
+    "title": "N2 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "返回",
+        "desc": "点击返回「等级频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".old-level-list article[data-go] h3",
+        "title": "课程详情",
+        "desc": "点击课程标题，进入「N2 课程详情」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "level-n1",
+    "page": "level-n1",
+    "title": "N1 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "返回",
+        "desc": "点击返回「等级频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".old-level-list article[data-go] h3",
+        "title": "课程详情",
+        "desc": "点击课程标题，进入「N1 课程详情」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "level-native",
+    "page": "level-native",
+    "title": "NT 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "返回",
+        "desc": "点击返回「等级频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "scene-basic",
+    "page": "scene-basic",
+    "title": "基础沟通 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"scene\"]",
+        "title": "返回",
+        "desc": "点击返回「场景频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "feature-adverbs",
+    "page": "feature-adverbs",
+    "title": "副词特集 课程列表",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"feature\"]",
+        "title": "返回",
+        "desc": "点击返回「特集频道」。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".old-level-list article:not(.member-locked) p",
+        "title": "语法关联",
+        "desc": "点击语法标签，打开对应的「关联课程」。"
+      },
+      {
+        "selector": ".old-level-list article.member-locked",
+        "title": "解锁课程",
+        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
+      },
+      {
+        "selector": ".level-list-head [data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "lesson-detail",
+    "page": "lesson-detail",
+    "title": "N1 · 言うまでもない",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"level-n1\"]",
+        "title": "返回",
+        "desc": "点击返回「N1 频道」。"
+      },
+      {
+        "selector": "[data-action=\"favorite-lesson\"]",
+        "title": "收藏课程",
+        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。"
+      },
+      {
+        "selector": ".grammar-tag-row span",
+        "title": "语法关联",
+        "desc": "点击打开该语法的「关联课程」。"
+      },
+      {
+        "selector": ".lesson-summary-card [data-action=\"play\"]",
+        "title": "播放该课程",
+        "desc": "点击播放该课程音频。"
+      },
+      {
+        "selector": ".dialogue-list button:not([data-action])",
+        "title": "跟读录音",
+        "desc": "按住开始录音，松开结束。"
+      },
+      {
+        "selector": "[data-action=\"toggle-complete\"]",
+        "title": "学习状态",
+        "desc": "点击后变成“学习取消”。"
+      },
+      {
+        "selector": ".lesson-bottom-actions button:first-child",
+        "title": "上一课",
+        "desc": "点击切换至当前对应列表的相邻上一课。"
+      },
+      {
+        "selector": ".lesson-bottom-actions button:last-child",
+        "title": "下一课",
+        "desc": "点击切换至当前对应列表的相邻下一课。"
+      },
+      {
+        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
+        "title": "句子播放",
+        "desc": "点击仅播放该句音频。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "n3-lesson-detail",
+    "page": "n3-lesson-detail",
+    "title": "N3 · 出来上がる",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"level-n3\"]",
+        "title": "返回",
+        "desc": "点击返回「N3 频道」。"
+      },
+      {
+        "selector": "[data-action=\"favorite-lesson\"]",
+        "title": "收藏课程",
+        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。"
+      },
+      {
+        "selector": ".grammar-tag-row span",
+        "title": "语法关联",
+        "desc": "点击打开该语法的「关联课程」。"
+      },
+      {
+        "selector": ".lesson-summary-card [data-action=\"play\"]",
+        "title": "播放该课程",
+        "desc": "点击播放该课程音频。"
+      },
+      {
+        "selector": ".dialogue-list button:not([data-action])",
+        "title": "跟读录音",
+        "desc": "按住开始录音，松开结束。"
+      },
+      {
+        "selector": "[data-action=\"toggle-complete\"]",
+        "title": "学习状态",
+        "desc": "点击后变成“学习取消”。"
+      },
+      {
+        "selector": ".lesson-bottom-actions button:first-child",
+        "title": "上一课",
+        "desc": "点击切换至当前对应列表的相邻上一课。"
+      },
+      {
+        "selector": ".lesson-bottom-actions button:last-child",
+        "title": "下一课",
+        "desc": "点击切换至当前对应列表的相邻下一课。"
+      },
+      {
+        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
+        "title": "句子播放",
+        "desc": "点击仅播放该句音频。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "n2-lesson-detail",
+    "page": "n2-lesson-detail",
+    "title": "N2 · 力の限り走る",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-go=\"level-n2\"]",
+        "title": "返回",
+        "desc": "点击返回「N2 频道」。"
+      },
+      {
+        "selector": "[data-action=\"favorite-lesson\"]",
+        "title": "收藏课程",
+        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。"
+      },
+      {
+        "selector": ".grammar-tag-row span",
+        "title": "语法关联",
+        "desc": "点击打开该语法的「关联课程」。"
+      },
+      {
+        "selector": ".lesson-summary-card [data-action=\"play\"]",
+        "title": "播放该课程",
+        "desc": "点击播放该课程音频。"
+      },
+      {
+        "selector": ".dialogue-list button:not([data-action])",
+        "title": "跟读录音",
+        "desc": "按住开始录音，松开结束。"
+      },
+      {
+        "selector": "[data-action=\"toggle-complete\"]",
+        "title": "学习状态",
+        "desc": "点击后变成“学习取消”。"
+      },
+      {
+        "selector": ".lesson-bottom-actions button:first-child",
+        "title": "上一课",
+        "desc": "点击切换至当前对应列表的相邻上一课。"
+      },
+      {
+        "selector": ".lesson-bottom-actions button:last-child",
+        "title": "下一课",
+        "desc": "点击切换至当前对应列表的相邻下一课。"
+      },
+      {
+        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
+        "title": "句子播放",
+        "desc": "点击仅播放该句音频。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "grammar-examples",
+    "page": "grammar-examples",
+    "title": "语法关联课程",
+    "group": "课程与语法",
+    "annotations": [
+      {
+        "selector": "[data-action=\"grammar-back\"]",
+        "title": "返回来源",
+        "desc": "点击返回语法。"
+      },
+      {
+        "selector": "[data-action=\"play\"]",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": "grammar"
+  },
+  {
+    "id": "podcast",
+    "page": "podcast",
+    "title": "播客列表",
+    "group": "播客与收藏",
+    "annotations": [
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": "[data-podcast=\"0\"] h3",
+        "title": "节目详情",
+        "desc": "点击标题，进入对应的播客详情。"
+      },
+      {
+        "selector": "article.member-locked",
+        "title": "解锁节目",
+        "desc": "点击带锁节目，进入「会员购买」。"
+      },
+      {
+        "selector": ".podcast-progress-hero button",
+        "title": "全部播放",
+        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "podcast-detail",
+    "page": "podcast-detail",
+    "title": "播客详情",
+    "group": "播客与收藏",
+    "annotations": [
+      {
+        "selector": "[data-go=\"podcast\"]",
+        "title": "返回",
+        "desc": "点击返回「播客频道」。"
+      },
+      {
+        "selector": ".podcast-audio-bar button",
+        "title": "播放节目",
+        "desc": "点击播放本期播客音频。"
+      }
+    ],
+    "setup": "podcast"
+  },
+  {
+    "id": "favorite",
+    "page": "favorite",
+    "title": "收藏",
+    "group": "播客与收藏",
+    "annotations": [
+      {
+        "selector": ".favorite-filters",
+        "title": "收藏分类",
+        "desc": "点击切换课程收藏与播客收藏。"
+      },
+      {
+        "selector": "[data-tool=\"filter\"]",
+        "title": "筛选课程",
+        "desc": "点击展开菜单，按学习状态筛选。"
+      },
+      {
+        "selector": "[data-tool=\"sort\"]",
+        "title": "调整排序",
+        "desc": "点击展开菜单，选择推荐或学习顺序。"
+      },
+      {
+        "selector": ".lesson-favorite-item h3",
+        "title": "复习课程",
+        "desc": "点击进入该主题课程。"
+      },
+      {
+        "selector": ".favorite-course-card p b",
+        "title": "语法关联",
+        "desc": "点击打开该语法的「关联课程」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "favorite-podcast",
+    "page": "favorite",
+    "title": "收藏 · 播客",
+    "group": "播客与收藏",
+    "annotations": [
+      {
+        "selector": ".favorite-filters",
+        "title": "切换收藏分类",
+        "desc": "点击「课程」返回课程收藏列表。"
+      }
+    ],
+    "setup": "favorite-podcast"
+  },
+  {
+    "id": "membership",
+    "page": "membership",
+    "title": "会员购买",
+    "group": "会员",
+    "annotations": [
+      {
+        "selector": "[data-go=\"home\"]",
+        "title": "返回",
+        "desc": "返回首图。"
+      },
+      {
+        "selector": ".plan-card",
+        "title": "选择套餐",
+        "desc": "点击选择会员时长，并更新应付金额。"
+      },
+      {
+        "selector": "[data-action=\"activate-member\"]",
+        "title": "立即开通",
+        "desc": "点击后跳转支付页面。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "membership-success",
+    "page": "membership-success",
+    "title": "开通成功",
+    "group": "会员",
+    "annotations": [
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "去学习",
+        "desc": "点击进入「等级频道」。"
+      },
+      {
+        "selector": ".success-actions [data-go=\"home\"]",
+        "title": "返回首页",
+        "desc": "点击返回「首页频道」。"
+      }
+    ],
+    "setup": "success"
+  },
+  {
+    "id": "member-active",
+    "page": "membership",
+    "title": "会员中心",
+    "group": "会员",
+    "annotations": [
+      {
+        "selector": "[data-go=\"home\"]",
+        "title": "返回",
+        "desc": "点击返回「首页频道」。"
+      },
+      {
+        "selector": "[data-go=\"course\"]",
+        "title": "继续学习",
+        "desc": "点击进入「等级频道」。"
+      }
+    ],
+    "setup": "paid"
+  },
+  {
+    "id": "profile",
+    "page": "profile",
+    "title": "我的",
+    "group": "个人与设置",
+    "annotations": [
+      {
+        "selector": "[data-action=\"open-avatar\"]",
+        "title": "更换头像",
+        "desc": "点击打开「选择头像」。"
+      },
+      {
+        "selector": "[data-action=\"open-nickname\"]",
+        "title": "修改昵称",
+        "desc": "点击打开「修改昵称」。"
+      },
+      {
+        "selector": "[data-go=\"membership\"]",
+        "title": "开通会员",
+        "desc": "点击进入「会员购买」。"
+      },
+      {
+        "selector": "[data-action=\"open-level-rules\"]",
+        "title": "等级规则",
+        "desc": "点击查看「日语学习等级制度」。"
+      },
+      {
+        "selector": "[data-go=\"security\"]",
+        "title": "安全中心",
+        "desc": "点击进入「安全中心」。"
+      },
+      {
+        "selector": "[data-go=\"support\"]",
+        "title": "联系客服",
+        "desc": "点击进入「联系客服」。"
+      },
+      {
+        "selector": "[data-go=\"settings\"]",
+        "title": "系统设置",
+        "desc": "点击进入「系统设置」。"
+      },
+      {
+        "selector": "[data-action=\"logout\"]",
+        "title": "退出登录",
+        "desc": "点击打开「退出登录」确认框。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "security",
+    "page": "security",
+    "title": "安全中心",
+    "group": "个人与设置",
+    "annotations": [
+      {
+        "selector": "[data-go=\"profile\"]",
+        "title": "返回",
+        "desc": "点击返回「我的频道」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "support",
+    "page": "support",
+    "title": "联系客服",
+    "group": "个人与设置",
+    "annotations": [
+      {
+        "selector": "[data-go=\"profile\"]",
+        "title": "返回",
+        "desc": "点击返回「我的频道」。"
+      },
+      {
+        "selector": "[data-copy]",
+        "title": "复制客服邮箱",
+        "desc": "点击复制客服邮箱；请粘贴确认是否成功。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "settings",
+    "page": "settings",
+    "title": "系统设置",
+    "group": "个人与设置",
+    "annotations": [
+      {
+        "selector": "[data-go=\"profile\"]",
+        "title": "返回",
+        "desc": "点击返回「我的频道」。"
+      },
+      {
+        "selector": ".option-panel:has(h3:text-is(\"播放速度\")) .radio-grid",
+        "title": "播放速度",
+        "desc": "点击切换选项。"
+      },
+      {
+        "selector": ".option-panel:has(h3:text-is(\"播放顺序\")) .radio-grid",
+        "title": "播放顺序",
+        "desc": "点击切换顺序或随机。"
+      },
+      {
+        "selector": ".option-panel:has(h3:text-is(\"播放次数(会话语音播放次数)\")) .radio-grid",
+        "title": "播放次数",
+        "desc": "点击选择次数。"
+      },
+      {
+        "selector": ".option-panel:has(h3:text-is(\"翻译文显示\")) .radio-grid",
+        "title": "翻译显示",
+        "desc": "点击切换开关。"
+      },
+      {
+        "selector": ".option-panel:has(h3:text-is(\"假名显示\")) .radio-grid",
+        "title": "假名显示",
+        "desc": "点击切换开关。"
+      },
+      {
+        "selector": "[data-detail-font=\"large\"]",
+        "title": "详情字号",
+        "desc": "点击调整详情日文字号，并保存选择。"
+      },
+      {
+        "selector": ".option-panel:has(h3:text-is(\"罗马音显示\")) .radio-grid",
+        "title": "罗马音显示",
+        "desc": "点击切换开关。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "login",
+    "page": "login",
+    "title": "登录",
+    "group": "账号",
+    "annotations": [
+      {
+        "selector": ".auth-tabs",
+        "title": "账号方式",
+        "desc": "点击切换选中方式；输入字段保持不变。"
+      },
+      {
+        "selector": "input",
+        "title": "填写账号",
+        "desc": "此处要提示：海外用户请用邮箱注册。"
+      },
+      {
+        "selector": "input[type=\"password\"]",
+        "title": "填写密码",
+        "desc": "输入密码。"
+      },
+      {
+        "selector": ".auth-primary",
+        "title": "登录",
+        "desc": "点击进入「首页」。"
+      },
+      {
+        "selector": ".auth-links [data-go=\"register\"]",
+        "title": "去注册",
+        "desc": "点击进入「注册」。"
+      },
+      {
+        "selector": ".auth-links [data-go=\"forgot-password\"]",
+        "title": "找回密码",
+        "desc": "点击进入「找回密码」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "register",
+    "page": "register",
+    "title": "注册",
+    "group": "账号",
+    "annotations": [
+      {
+        "selector": ".auth-tabs",
+        "title": "账号方式",
+        "desc": "点击切换选中方式；输入字段保持不变。"
+      },
+      {
+        "selector": "input",
+        "title": "填写账号",
+        "desc": "输入当前字段所需的账号信息。"
+      },
+      {
+        "selector": "input[type=\"password\"]",
+        "title": "填写密码",
+        "desc": "输入密码。"
+      },
+      {
+        "selector": "input[placeholder=\"请输入验证码\"]",
+        "title": "填写验证码",
+        "desc": "输入验证码。"
+      },
+      {
+        "selector": "[data-go=\"verify-code-sent\"]",
+        "title": "获取验证码",
+        "desc": "点击进入「验证码已发送」。"
+      },
+      {
+        "selector": ".auth-primary",
+        "title": "注册",
+        "desc": "点击注册，然后跳转到登录页面自动登录。"
+      },
+      {
+        "selector": ".auth-links [data-go=\"login\"]",
+        "title": "返回登录",
+        "desc": "点击返回「登录」。"
+      },
+      {
+        "selector": ".auth-links [data-go=\"forgot-password\"]",
+        "title": "找回密码",
+        "desc": "点击进入「找回密码」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "forgot-password",
+    "page": "forgot-password",
+    "title": "找回密码",
+    "group": "账号",
+    "annotations": [
+      {
+        "selector": "input",
+        "title": "填写账号",
+        "desc": "输入手机号或邮箱。"
+      },
+      {
+        "selector": "input[type=\"password\"]",
+        "title": "填写密码",
+        "desc": "输入新密码。"
+      },
+      {
+        "selector": "[data-go=\"verify-code-sent\"]",
+        "title": "获取验证码",
+        "desc": "点击进入「验证码已发送」。"
+      },
+      {
+        "selector": "input[placeholder=\"请输入验证码\"]",
+        "title": "填写验证码",
+        "desc": "输入验证码。"
+      },
+      {
+        "selector": ".auth-primary",
+        "title": "找回密码",
+        "desc": "点击进入「登录」。"
+      },
+      {
+        "selector": ".auth-links [data-go=\"login\"]",
+        "title": "返回登录",
+        "desc": "点击返回「登录」。"
+      },
+      {
+        "selector": ".auth-links [data-go=\"register\"]",
+        "title": "去注册",
+        "desc": "点击进入「注册」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "verify-code-sent",
+    "page": "verify-code-sent",
+    "title": "验证码已发送",
+    "group": "账号",
+    "annotations": [
+      {
+        "selector": "[data-go=\"register\"]",
+        "title": "返回注册",
+        "desc": "点击返回「注册」。"
+      },
+      {
+        "selector": "[data-go=\"login\"]",
+        "title": "去登录",
+        "desc": "点击进入「登录」。"
+      }
+    ],
+    "setup": null
+  },
+  {
+    "id": "notice",
+    "page": "home",
+    "title": "通知",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": "GLOBAL [data-notice-podcast]",
+        "title": "播客更新",
+        "desc": "点击进入「播客详情 · 日本の車生活について」。"
+      },
+      {
+        "selector": "GLOBAL [data-action=\"close-sheet\"]",
+        "title": "关闭通知",
+        "desc": "点击关闭抽屉，返回「首页」。"
+      }
+    ],
+    "setup": "notice"
+  },
+  {
+    "id": "rules",
+    "page": "home",
+    "title": "日语学习等级制度",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": "GLOBAL [data-action=\"close-level-rules\"]",
+        "title": "关闭等级说明",
+        "desc": "点击关闭说明，返回「首页」。"
+      }
+    ],
+    "setup": "rules"
+  },
+  {
+    "id": "logout",
+    "page": "profile",
+    "title": "退出登录确认",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": "GLOBAL [data-action=\"cancel-logout\"]",
+        "title": "取消退出",
+        "desc": "点击关闭确认框，保留「我的」。"
+      },
+      {
+        "selector": "GLOBAL [data-action=\"confirm-logout\"]",
+        "title": "确认退出",
+        "desc": "点击进入登录页面。"
+      }
+    ],
+    "setup": "logout"
+  },
+  {
+    "id": "nickname",
+    "page": "profile",
+    "title": "修改昵称",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": "GLOBAL .nickname-modal input",
+        "title": "编辑昵称",
+        "desc": "输入新的昵称。"
+      },
+      {
+        "selector": "GLOBAL .nickname-modal button:last-child",
+        "title": "保存",
+        "desc": "点击保存昵称并关闭弹窗。"
+      },
+      {
+        "selector": "GLOBAL .nickname-modal button:first-child",
+        "title": "取消",
+        "desc": "点击关闭弹窗，返回「我的」。"
+      }
+    ],
+    "setup": "nickname"
+  },
+  {
+    "id": "avatar",
+    "page": "profile",
+    "title": "选择头像",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": "GLOBAL .avatar-grid button",
+        "title": "选择头像",
+        "desc": "点击选中头像，确定后应用。"
+      },
+      {
+        "selector": "GLOBAL [data-action=\"confirm-avatar\"]",
+        "title": "确定头像",
+        "desc": "点击更新「我的」头像。"
+      },
+      {
+        "selector": "GLOBAL .avatar-modal header button",
+        "title": "关闭选择",
+        "desc": "点击关闭弹窗，不应用新选择。"
+      }
+    ],
+    "setup": "avatar"
+  },
+  {
+    "id": "playback",
+    "page": "level-n1",
+    "title": "课程播放浮层",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": "GLOBAL [data-action=\"close-level-playback\"]",
+        "title": "关闭播放浮层",
+        "desc": "点击关闭浮层，返回「N1 课程列表」。"
+      }
+    ],
+    "setup": "playback"
+  },
+  {
+    "id": "filter-menu",
+    "page": "course",
+    "title": "课程筛选菜单",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": ".filter-menu",
+        "title": "选择学习状态",
+        "desc": "点击全部、未学习或已学习，筛选列表。"
+      }
+    ],
+    "setup": "filter"
+  },
+  {
+    "id": "sort-menu",
+    "page": "course",
+    "title": "课程排序菜单",
+    "group": "弹窗与菜单",
+    "annotations": [
+      {
+        "selector": ".sort-menu",
+        "title": "选择排列顺序",
+        "desc": "点击推荐、未学习优先或最近学习，重排列表。"
+      }
+    ],
+    "setup": "sort"
+  }
+]
