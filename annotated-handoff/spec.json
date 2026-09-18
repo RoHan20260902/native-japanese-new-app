@@ -510,7 +510,7 @@
       {
         "selector": "[data-action=\"toggle-complete\"]",
         "title": "学习状态",
-        "desc": "灰色“学习取消”；点击变为黄色“学习完成”。"
+        "desc": "灰色“学习取消”与黄色“学习完成”，点击可双向切换。"
       },
       {
         "selector": ".lesson-bottom-actions button:first-child",
@@ -529,21 +529,6 @@
       }
     ],
     "setup": null
-  },
-  {
-    "id": "lesson-detail-toggle",
-    "page": "lesson-detail",
-    "title": "N1 · 言うまでもない",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "黄色“学习完成”；点击变为灰色“学习取消”。"
-      }
-    ],
-    "setup": "learning-toggle",
-    "state": "学习完成（黄色）"
   },
   {
     "id": "n3-lesson-detail",
@@ -577,11 +562,6 @@
         "desc": "按住开始录音，松开结束。"
       },
       {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "灰色“学习取消”；点击变为黄色“学习完成”。"
-      },
-      {
         "selector": ".lesson-bottom-actions button:first-child",
         "title": "上一课",
         "desc": "点击切换至当前对应列表的相邻上一课。"
@@ -598,21 +578,6 @@
       }
     ],
     "setup": null
-  },
-  {
-    "id": "n3-lesson-detail-toggle",
-    "page": "n3-lesson-detail",
-    "title": "N3 · 出来上がる",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "黄色“学习完成”；点击变为灰色“学习取消”。"
-      }
-    ],
-    "setup": "learning-toggle",
-    "state": "学习完成（黄色）"
   },
   {
     "id": "n2-lesson-detail",
@@ -646,11 +611,6 @@
         "desc": "按住开始录音，松开结束。"
       },
       {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "黄色“学习完成”；点击变为灰色“学习取消”。"
-      },
-      {
         "selector": ".lesson-bottom-actions button:first-child",
         "title": "上一课",
         "desc": "点击切换至当前对应列表的相邻上一课。"
@@ -667,21 +627,6 @@
       }
     ],
     "setup": null
-  },
-  {
-    "id": "n2-lesson-detail-toggle",
-    "page": "n2-lesson-detail",
-    "title": "N2 · 力の限り走る",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "灰色“学习取消”；点击变为黄色“学习完成”。"
-      }
-    ],
-    "setup": "learning-toggle",
-    "state": "学习取消（灰色）"
   },
   {
     "id": "grammar-examples",

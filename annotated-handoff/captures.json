@@ -1207,7 +1207,7 @@
       {
         "selector": "[data-action=\"toggle-complete\"]",
         "title": "学习状态",
-        "desc": "灰色“学习取消”；点击变为黄色“学习完成”。",
+        "desc": "灰色“学习取消”与黄色“学习完成”，点击可双向切换。",
         "query": "[data-page=\"lesson-detail\"] [data-action=\"toggle-complete\"]",
         "rect": {
           "x": 131.6875,
@@ -1246,31 +1246,6 @@
     "state": "下方内容",
     "scroll": 243,
     "image": "screens/lesson-detail-1.png"
-  },
-  {
-    "id": "lesson-detail-toggle-0",
-    "page": "lesson-detail",
-    "title": "N1 · 言うまでもない",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "黄色“学习完成”；点击变为灰色“学习取消”。",
-        "query": "[data-page=\"lesson-detail\"] [data-action=\"toggle-complete\"]",
-        "rect": {
-          "x": 131.6875,
-          "y": 596.03125,
-          "width": 129.609375,
-          "height": 48
-        }
-      }
-    ],
-    "setup": "learning-toggle",
-    "sourceId": "lesson-detail-toggle",
-    "state": "学习完成（黄色）",
-    "scroll": 243,
-    "image": "screens/lesson-detail-toggle-0.png"
   },
   {
     "id": "n3-lesson-detail-0",
@@ -1364,18 +1339,6 @@
     "group": "课程与语法",
     "annotations": [
       {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "灰色“学习取消”；点击变为黄色“学习完成”。",
-        "query": "[data-page=\"n3-lesson-detail\"] [data-action=\"toggle-complete\"]",
-        "rect": {
-          "x": 131.6875,
-          "y": 596.03125,
-          "width": 129.609375,
-          "height": 48
-        }
-      },
-      {
         "selector": ".lesson-bottom-actions button:first-child",
         "title": "上一课",
         "desc": "点击切换至当前对应列表的相邻上一课。",
@@ -1405,31 +1368,6 @@
     "state": "下方内容",
     "scroll": 441,
     "image": "screens/n3-lesson-detail-1.png"
-  },
-  {
-    "id": "n3-lesson-detail-toggle-0",
-    "page": "n3-lesson-detail",
-    "title": "N3 · 出来上がる",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "黄色“学习完成”；点击变为灰色“学习取消”。",
-        "query": "[data-page=\"n3-lesson-detail\"] [data-action=\"toggle-complete\"]",
-        "rect": {
-          "x": 131.6875,
-          "y": 596.03125,
-          "width": 129.609375,
-          "height": 48
-        }
-      }
-    ],
-    "setup": "learning-toggle",
-    "sourceId": "n3-lesson-detail-toggle",
-    "state": "学习完成（黄色）",
-    "scroll": 441,
-    "image": "screens/n3-lesson-detail-toggle-0.png"
   },
   {
     "id": "n2-lesson-detail-0",
@@ -1523,18 +1461,6 @@
     "group": "课程与语法",
     "annotations": [
       {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "黄色“学习完成”；点击变为灰色“学习取消”。",
-        "query": "[data-page=\"n2-lesson-detail\"] [data-action=\"toggle-complete\"]",
-        "rect": {
-          "x": 131.6875,
-          "y": 595.625,
-          "width": 129.609375,
-          "height": 48
-        }
-      },
-      {
         "selector": ".lesson-bottom-actions button:first-child",
         "title": "上一课",
         "desc": "点击切换至当前对应列表的相邻上一课。",
@@ -1564,31 +1490,6 @@
     "state": "下方内容",
     "scroll": 469,
     "image": "screens/n2-lesson-detail-1.png"
-  },
-  {
-    "id": "n2-lesson-detail-toggle-0",
-    "page": "n2-lesson-detail",
-    "title": "N2 · 力の限り走る",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": "[data-action=\"toggle-complete\"]",
-        "title": "学习状态",
-        "desc": "灰色“学习取消”；点击变为黄色“学习完成”。",
-        "query": "[data-page=\"n2-lesson-detail\"] [data-action=\"toggle-complete\"]",
-        "rect": {
-          "x": 131.6875,
-          "y": 595.625,
-          "width": 129.609375,
-          "height": 48
-        }
-      }
-    ],
-    "setup": "learning-toggle",
-    "sourceId": "n2-lesson-detail-toggle",
-    "state": "学习取消（灰色）",
-    "scroll": 469,
-    "image": "screens/n2-lesson-detail-toggle-0.png"
   },
   {
     "id": "grammar-examples-0",
