@@ -2,6 +2,8 @@ from pathlib import Path
 import json,base64,re
 root=Path('annotated-handoff')
 views=json.loads((root/'captures.json').read_text())
+excluded=json.loads((root/'excluded-views.json').read_text()) if (root/'excluded-views.json').exists() else []
+views=[v for v in views if v['id'] not in excluded]
 D=[]
 for v in views:
  anns=[];sides={'left':[],'right':[]}
@@ -46,7 +48,7 @@ base=base.replace('<text x="403" y="55"','<text id="screenTitle" x="403" y="55"'
 base=base.replace('</style>','.screen-nav{padding:14px 28px;background:#f9fafb;border-bottom:1px solid #dce1e6;display:flex;justify-content:space-between;align-items:center;gap:16px}.screen-nav label{display:inline;margin-right:12px}.screen-nav select{font:inherit;font-size:14px;padding:9px;border:1px solid #ccd3da;border-radius:7px;max-width:450px;background:white}#count{font-size:12px;color:#6a7887}body.preview svg{max-height:calc(100vh - 205px);min-height:620px}svg{min-width:800px}#screenTitle{font-size:13px}@media(max-width:950px){.screen-nav{flex-wrap:wrap}.screen-nav select{max-width:70vw}}</style>')
 start=base.index("const key='native-japanese-annotation-v1'")
 end=base.index("function el(",start)
-base=base[:start]+'''const key='native-japanese-handoff-v15';const screens=JSON.parse(document.getElementById('initial').textContent);let saved={};try{saved=JSON.parse(localStorage.getItem(key))||{}}catch{}for(const s of screens)if(Array.isArray(saved[s.id]))s.annotations=saved[s.id];let current=0,items=screens[0].annotations,selected=null,drag=null,preview=true;const svg=document.getElementById('canvas'),layer=document.getElementById('annotations'),fields=['num','title','desc'];
+base=base[:start]+'''const key='native-japanese-handoff-v16';const screens=JSON.parse(document.getElementById('initial').textContent);let saved={};try{saved=JSON.parse(localStorage.getItem(key))||{}}catch{}for(const s of screens)if(Array.isArray(saved[s.id]))s.annotations=saved[s.id];let current=0,items=screens[0].annotations,selected=null,drag=null,preview=true;const svg=document.getElementById('canvas'),layer=document.getElementById('annotations'),fields=['num','title','desc'];
 const menu=document.getElementById('screenSelect');let group;
 for(const [i,s] of screens.entries()){if(!group||group.label!==s.group){group=document.createElement('optgroup');group.label=s.group;menu.append(group)}let option=document.createElement('option');option.value=i;option.textContent=s.title+(s.state==='页面概览'?'':' · '+s.state);group.append(option)}
 function showScreen(i){current=Math.max(0,Math.min(screens.length-1,Number(i)));items=screens[current].annotations;menu.value=current;document.getElementById('screen').setAttribute('href',screens[current].image);document.getElementById('screenTitle').textContent=screens[current].title+' · '+screens[current].state;document.getElementById('count').textContent=(current+1)+' / '+screens.length;document.getElementById('previous').disabled=current===0;document.getElementById('next').disabled=current===screens.length-1;select(null)}
