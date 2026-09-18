@@ -636,8 +636,8 @@
     "annotations": [
       {
         "selector": "[data-action=\"grammar-back\"]",
-        "title": "返回来源",
-        "desc": "点击返回语法。"
+        "title": "返回",
+        "desc": "返回原来课程详情或列表页面"
       },
       {
         "selector": "[data-action=\"play\"]",
