@@ -41,6 +41,8 @@
   }
 
   async function pull() {
+    // 编辑时不刷新页面，避免正在编辑的 P3 被共享轮询带回首图。
+    if (document.body && !document.body.classList.contains('preview')) return;
     try {
       const response = await fetch(TABLE_URL + '?id=eq.main&select=payload,updated_at', { headers });
       if (!response.ok) throw new Error('shared sync ' + response.status);
