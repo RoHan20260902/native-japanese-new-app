@@ -16,7 +16,6 @@ let interactionCount = 0;
 let ratingPromptShown = false;
 let noticeRead = false;
 let memberActive = false;
-let lastLearningPage = null;
 const FREE_LEVEL_LESSON_LIMIT = 3;
 const FREE_PODCAST_LIMIT = 3;
 const DETAIL_FONT_STORAGE_KEY = "nativeDetailFontSize";
@@ -71,14 +70,6 @@ try {
   applyDetailFontSize("medium");
 }
 
-function updateMemberLearningEntry() {
-  const banner = document.querySelector('.member-banner');
-  if (banner) banner.dataset.go = memberActive ? (lastLearningPage || 'course') : 'membership';
-  const summary = document.querySelector('[data-resume-summary]');
-  const lesson = lastLearningPage && document.querySelector('[data-page="' + lastLearningPage + '"] .lesson-title p');
-  if (summary) summary.textContent = lesson ? '上次学习：' + lesson.textContent.trim() : '选择一节课程，开始今天的学习。';
-}
-
 function applyMembershipState() {
   document.body.dataset.member = memberActive ? "paid" : "free";
   document.querySelectorAll("[data-member-paid]").forEach((item) => {
@@ -87,7 +78,6 @@ function applyMembershipState() {
   document.querySelectorAll("[data-member-free]").forEach((item) => {
     item.hidden = memberActive;
   });
-  updateMemberLearningEntry();
   const back = document.querySelector('[data-page="membership"] .page-title .round-btn');
   if (back) {
     back.dataset.go = memberActive ? 'profile' : 'home';
@@ -386,10 +376,6 @@ function setPage(name) {
   });
 
   currentPage = name;
-  if (['lesson-detail', 'n3-lesson-detail', 'n2-lesson-detail'].includes(name)) {
-    lastLearningPage = name;
-    updateMemberLearningEntry();
-  }
 }
 
 function openLevelPlayback(button) {
@@ -436,6 +422,7 @@ document.querySelectorAll("[data-action='activate-member']").forEach((button) =>
 
 document.addEventListener("click", (event) => {
   const target = event.target?.closest ? event.target : event.target?.parentElement;
+  if (Date.now() < Number(target?.closest('.home-banner-carousel')?.dataset.suppressClickUntil || 0)) { event.preventDefault(); event.stopImmediatePropagation(); return; }
   const lockedLesson = target?.closest?.(".old-level-list article.member-locked");
   if (lockedLesson) {
     event.preventDefault();
@@ -1369,3 +1356,38 @@ document.querySelectorAll(".dialogue-list .bubble button:nth-child(2)").forEach(
     window.setTimeout(closeRecording, 1200);
   });
 });
+
+// Homepage introductions: explicit actions; swiping never navigates.
+const homeBanner = document.querySelector('.home-banner-carousel');
+let homeBannerIndex = 0;
+function setHomeBanner(index) {
+  if (!homeBanner) return;
+  const slides = [...homeBanner.querySelectorAll('.home-banner-slide')];
+  homeBannerIndex = (index + slides.length) % slides.length;
+  homeBanner.querySelector('.home-banner-track').style.transform = `translateX(-${homeBannerIndex * 100}%)`;
+  slides.forEach((slide, i) => { slide.inert = i !== homeBannerIndex; slide.setAttribute('aria-hidden', String(i !== homeBannerIndex)); });
+  homeBanner.querySelectorAll('[data-banner-index]').forEach((dot,i)=>dot.setAttribute('aria-pressed',String(i===homeBannerIndex)));
+  homeBanner.querySelector('.home-banner-count').textContent = `0${homeBannerIndex+1} / 03`;
+}
+if (homeBanner) {
+  let gesture = null;
+  homeBanner.querySelectorAll('[data-banner-index]').forEach(dot=>dot.addEventListener('click',()=>setHomeBanner(Number(dot.dataset.bannerIndex))));
+  homeBanner.addEventListener('keydown',event=>{
+    if (!['ArrowLeft','ArrowRight'].includes(event.key)) return;
+    event.preventDefault(); setHomeBanner(homeBannerIndex+(event.key==='ArrowRight'?1:-1));
+  });
+  homeBanner.addEventListener('pointerdown',event=>{
+    if(event.button!==0)return;
+    gesture={id:event.pointerId,x:event.clientX,y:event.clientY};
+    if(!event.target.closest('button'))homeBanner.setPointerCapture(event.pointerId);
+  });
+  homeBanner.addEventListener('pointerup',event=>{
+    if(!gesture||gesture.id!==event.pointerId)return;
+    const dx=event.clientX-gesture.x,dy=event.clientY-gesture.y;gesture=null;
+    if(Math.abs(dx)>40&&Math.abs(dx)>Math.abs(dy)*1.2){homeBanner.dataset.suppressClickUntil=Date.now()+450;setHomeBanner(homeBannerIndex+(dx<0?1:-1));}
+  });
+  homeBanner.addEventListener('pointercancel',()=>gesture=null);
+  // Suppress synthetic clicks after dragging, including dot controls.
+  homeBanner.addEventListener('click',event=>{if(Date.now()<Number(homeBanner.dataset.suppressClickUntil||0)){event.preventDefault();event.stopImmediatePropagation();}},true);
+  setHomeBanner(0);
+}

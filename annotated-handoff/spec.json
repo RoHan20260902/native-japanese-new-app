@@ -21,6 +21,11 @@
         "desc": "点击打开「会员购买」界面。"
       },
       {
+        "selector": ".home-banner-controls",
+        "title": "Banner 切换",
+        "desc": "左右滑动或点击圆点，切换三张 App 介绍。"
+      },
+      {
         "selector": ".current-level-title",
         "title": "等级说明",
         "desc": "点击查看「日语学习等级制度」。"
@@ -41,24 +46,9 @@
         "desc": "点击进入「场景频道」。"
       },
       {
-        "selector": ".podcast-today .see-all",
-        "title": "节目列表",
-        "desc": "点击进入「播客列表」。"
-      },
-      {
         "selector": ".level-today .small-play",
         "title": "推荐内容播放",
         "desc": "点击播放对应推荐内容的音频。"
-      },
-      {
-        "selector": ".feature-today .see-all",
-        "title": "查看特集",
-        "desc": "点击进入「特集频道」。"
-      },
-      {
-        "selector": ".feature-today .small-play",
-        "title": "特集内容播放",
-        "desc": "点击播放对应特集内容的音频。"
       }
     ],
     "setup": null
@@ -72,8 +62,38 @@
     "annotations": [
       {
         "selector": ".member-banner button[data-member-paid]",
-        "title": "继续学习",
-        "desc": "点击继续上次课程；暂无学习记录时进入「等级频道」。"
+        "title": "探索课程",
+        "desc": "点击进入「等级频道」，浏览分级课程。"
+      }
+    ]
+  },
+  {
+    "id": "home-banner-scene",
+    "page": "home",
+    "title": "首页 · 场景介绍",
+    "group": "学习入口",
+    "setup": "paid",
+    "bannerIndex": 1,
+    "annotations": [
+      {
+        "selector": ".banner-scene button",
+        "title": "看看场景",
+        "desc": "点击进入「场景频道」，了解日常会话课程。"
+      }
+    ]
+  },
+  {
+    "id": "home-banner-podcast",
+    "page": "home",
+    "title": "首页 · 播客介绍",
+    "group": "学习入口",
+    "setup": "paid",
+    "bannerIndex": 2,
+    "annotations": [
+      {
+        "selector": ".banner-podcast button",
+        "title": "发现播客",
+        "desc": "点击进入「播客列表」，探索日语节目。"
       }
     ]
   },

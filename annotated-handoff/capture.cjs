@@ -9,6 +9,7 @@ if(s.setup==='podcast')await p.evaluate(()=>openPodcastDetail(0));
 if(s.setup==='success')await p.evaluate(()=>{setMembershipActive(true);setPage('membership-success')});
 if(s.setup==='resume')await p.evaluate(()=>{setMembershipActive(true);setPage('lesson-detail');setPage('home')});
 if(s.setup==='paid')await p.evaluate(()=>setMembershipActive(true));
+if(s.bannerIndex!==undefined)await p.evaluate(i=>setHomeBanner(i),s.bannerIndex);
 const actions={notice:'open-sheet',rules:'open-level-rules',logout:'logout',nickname:'open-nickname',avatar:'open-avatar'};
 if(actions[s.setup])await sel('[data-page="'+s.page+'"] [data-action="'+actions[s.setup]+'"]').click();
 if(s.setup==='recording'){await sel('[data-page="lesson-detail"] .dialogue-list button:not([data-action])').dispatchEvent('pointerdown')}

@@ -9622,3 +9622,39 @@ body[data-member="paid"] .member-banner button {
 .vip-row strong[data-member-paid][data-go]:focus-visible { outline: 3px solid #2388ff; outline-offset: 3px; }
 
 body[data-member="paid"] .member-banner .member-kicker { display: none; }
+
+/* Three swipeable app introductions; future campaign images can replace each slide. */
+.member-banner.home-banner-carousel,
+body[data-member="paid"] .member-banner.home-banner-carousel { padding:0; height:218px; min-height:218px; background:#c5efd7; overflow:hidden; touch-action:pan-y; cursor:default; }
+.home-banner-track { display:flex; height:100%; transition:transform .28s ease; }
+.home-banner-slide { position:relative; flex:0 0 100%; min-width:0; padding:18px 16px 38px; overflow:hidden; }
+.banner-course { background:linear-gradient(115deg,#c9f09f,#80debd); }
+.banner-scene { background:linear-gradient(115deg,#ffe29e,#ffb7a7); }
+.banner-podcast { background:linear-gradient(115deg,#d5d9ff,#9adfed); }
+.home-banner-copy { position:relative; z-index:2; width:71%; }
+.member-banner .home-banner-kicker { display:block; color:#26382f; font-size:9px; letter-spacing:.4px; font-weight:900; margin:0 0 10px; }
+.member-banner .home-banner-copy h2 { width:auto; max-width:none; margin:0; font-size:20px; line-height:1.25; white-space:normal; color:#101010; }
+.member-banner .home-banner-copy p { display:block; width:auto; margin:9px 0 0; font-size:11px; line-height:1.65; font-weight:700; color:#35443b; }
+.member-banner .home-banner-copy button,
+body[data-member="paid"] .member-banner .home-banner-copy button { height:34px; min-width:0; margin-top:12px; padding:0 13px; border:2px solid #101010; background:#fff8ee; color:#101010; font-size:12px; box-shadow:2px 3px 0 #101010; gap:12px; }
+.member-banner .home-banner-copy button span { color:inherit; font-size:15px; }
+.home-banner-illustration { position:absolute; right:10px; top:54px; width:84px; height:100px; transform:rotate(8deg); z-index:1; }
+.home-banner-illustration i,.home-banner-illustration b,.home-banner-illustration em { position:absolute; display:grid; place-items:center; border:2px solid #101010; border-radius:12px; box-shadow:3px 4px 0 #101010; font-style:normal; color:#101010; }
+.home-banner-illustration i { width:64px;height:65px;right:0;top:0;font-size:36px;background:#ffe019; }
+.home-banner-illustration b { bottom:0;right:0;padding:6px 10px;font-size:16px;background:#fff8ee; }
+.home-banner-illustration em { bottom:27px;left:-8px;padding:4px 7px;font-size:10px;background:#fff8ee;transform:rotate(-16deg); }
+.banner-chat-art i { font-size:10px;background:#fff8ee; }
+.banner-chat-art b { font-size:14px;background:#ffc64e; }
+.banner-audio-art i { background:#779cf3; }
+.banner-audio-art b { font-size:12px; }
+.home-banner-controls { position:absolute;z-index:3;bottom:8px;left:16px;right:16px;display:flex;align-items:center;justify-content:space-between;height:20px; }
+.member-banner .home-banner-count,.member-banner .home-banner-hint { color:#26382f;font-size:9px;font-weight:800; }
+.member-banner .home-banner-hint span { display:inline;color:inherit;font-size:12px; }
+.home-banner-dots { display:flex;gap:8px; }
+.member-banner .home-banner-dots button,body[data-member="paid"] .member-banner .home-banner-dots button { padding:0;margin:0;width:20px;min-width:20px;height:20px;border:0;border-radius:0;box-shadow:none;background:transparent;display:grid;place-items:center; }
+.home-banner-dots button::after { content:'';display:block;width:6px;height:6px;border:1.5px solid #101010;border-radius:99px;background:transparent; }
+.home-banner-dots button[aria-pressed="true"]::after { width:18px;background:#101010; }
+.home-banner-carousel:focus-visible,.home-banner-carousel button:focus-visible { outline:3px solid #2388ff;outline-offset:-3px; }
+@media(prefers-reduced-motion:reduce){.home-banner-track{transition:none}}
+
+.home-banner-carousel { user-select: none; -webkit-user-select: none; }

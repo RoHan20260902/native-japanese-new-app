@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700;900&family=Noto+Sans+SC:wght@500;700;900&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css?v=member-home-49" />
+    <link rel="stylesheet" href="./styles.css?v=banner-intro-50" />
   </head>
   <body>
     <main class="stage">
@@ -27,29 +27,48 @@
               <button data-go="feature">特集</button>
             </nav>
 
-            <article class="member-banner" data-go="membership">
-              <div class="member-copy">
-                <span class="member-kicker" data-member-free>未开通会员</span>
-                <span class="member-kicker" data-member-paid>学习进行时</span>
-                <h2 data-member-free>解锁全部课程与播客</h2>
-                <h2 data-member-paid>继续学习</h2>
-                <p data-member-free>开通后可学习 N5 到 NT、场景、特集与播客内容。</p>
-                <p data-member-paid data-resume-summary>选择一节课程，开始今天的学习。</p>
-                <button type="button" data-member-free>开通会员</button>
-                <button type="button" data-member-paid>继续学习</button>
+            <section class="member-banner home-banner-carousel" aria-label="认识 Native 日本语" aria-roledescription="轮播" tabindex="0">
+              <div class="home-banner-track">
+                <article class="home-banner-slide banner-course" role="group" aria-roledescription="幻灯片" aria-label="1 / 3 等级课程">
+                  <div class="home-banner-copy">
+                    <span class="home-banner-kicker">NATIVE 日本语 · 系统学习</span>
+                    <h2 data-member-free>解锁你的日语新世界</h2>
+                    <h2 data-member-paid>从入门到自然表达</h2>
+                    <p>N5 到 NT 分级课程，<br>一步步学会地道日语。</p>
+                    <button type="button" data-member-free data-go="membership">开通会员 <span aria-hidden="true">↗</span></button>
+                    <button type="button" data-member-paid data-go="course">探索课程 <span aria-hidden="true">↗</span></button>
+                  </div>
+                  <div class="home-banner-illustration banner-level-art" aria-hidden="true"><i>あ</i><b>NT</b><em>N5 →</em></div>
+                </article>
+                <article class="home-banner-slide banner-scene" role="group" aria-roledescription="幻灯片" aria-label="2 / 3 场景会话" aria-hidden="true" inert>
+                  <div class="home-banner-copy">
+                    <span class="home-banner-kicker">NATIVE 日本语 · 真实场景</span>
+                    <h2>把日语用进生活里</h2>
+                    <p>从日常寒暄到旅行职场，<br>在场景会话中积累表达。</p>
+                    <button type="button" data-go="scene">看看场景 <span aria-hidden="true">↗</span></button>
+                  </div>
+                  <div class="home-banner-illustration banner-chat-art" aria-hidden="true"><i>こんにちは</i><b>いいね!</b><em>会話</em></div>
+                </article>
+                <article class="home-banner-slide banner-podcast" role="group" aria-roledescription="幻灯片" aria-label="3 / 3 日语播客" aria-hidden="true" inert>
+                  <div class="home-banner-copy">
+                    <span class="home-banner-kicker">NATIVE 日本语 · 听见日常</span>
+                    <h2>听懂真实的日本生活</h2>
+                    <p>用日语播客练习听力，<br>熟悉真实语速与自然表达。</p>
+                    <button type="button" data-go="podcast">发现播客 <span aria-hidden="true">↗</span></button>
+                  </div>
+                  <div class="home-banner-illustration banner-audio-art" aria-hidden="true"><i>♫</i><b>RADIO</b><em>日本語</em></div>
+                </article>
               </div>
-              <div class="banner-art" aria-hidden="true">
-                <span class="shape plus red"></span>
-                <span class="shape dots left"></span>
-                <span class="shape button-line"></span>
-                <span class="shape rect"></span>
-                <span class="shape triangle"></span>
-                <span class="shape half"></span>
-                <span class="shape bezier"></span>
-                <span class="shape dots right"></span>
-                <span class="shape plus yellow"></span>
+              <div class="home-banner-controls">
+                <span class="home-banner-count" aria-live="polite">01 / 03</span>
+                <div class="home-banner-dots" aria-label="选择 Banner">
+                  <button type="button" data-banner-index="0" aria-label="第 1 张：等级课程" aria-pressed="true"></button>
+                  <button type="button" data-banner-index="1" aria-label="第 2 张：场景会话" aria-pressed="false"></button>
+                  <button type="button" data-banner-index="2" aria-label="第 3 张：日语播客" aria-pressed="false"></button>
+                </div>
+                <span class="home-banner-hint">左右滑动 <span aria-hidden="true">↔</span></span>
               </div>
-            </article>
+            </section>
 
             <article class="dashboard-card progress-overview study-overview">
               <div class="growth-identity">
@@ -1317,6 +1336,6 @@ Native日本語ラジオです。
       </section>
     </main>
 
-    <script src="./app.js?v=member-home-49"></script>
+    <script src="./app.js?v=banner-intro-50"></script>
   </body>
 </html>

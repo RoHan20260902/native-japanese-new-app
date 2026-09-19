@@ -35,10 +35,22 @@
         "desc": "点击打开「会员购买」界面。",
         "query": "[data-page=\"home\"] .member-banner button[data-member-free]",
         "rect": {
-          "x": 37,
-          "y": 309.28125,
-          "width": 128,
-          "height": 38
+          "x": 35,
+          "y": 324.28125,
+          "width": 105,
+          "height": 34
+        }
+      },
+      {
+        "selector": ".home-banner-controls",
+        "title": "Banner 切换",
+        "desc": "左右滑动或点击圆点，切换三张 App 介绍。",
+        "query": "[data-page=\"home\"] .home-banner-controls",
+        "rect": {
+          "x": 35,
+          "y": 385,
+          "width": 323,
+          "height": 20
         }
       },
       {
@@ -48,7 +60,7 @@
         "query": "[data-page=\"home\"] .current-level-title",
         "rect": {
           "x": 45,
-          "y": 437.28125,
+          "y": 485,
           "width": 153.75,
           "height": 30
         }
@@ -85,7 +97,7 @@
         "query": "[data-page=\"home\"] .level-today .see-all",
         "rect": {
           "x": 302.328125,
-          "y": 378.109375,
+          "y": 378.828125,
           "width": 57.671875,
           "height": 17
         }
@@ -97,7 +109,7 @@
         "query": "[data-page=\"home\"] .scene-today .see-all",
         "rect": {
           "x": 302.328125,
-          "y": 523.171875,
+          "y": 523.890625,
           "width": 57.671875,
           "height": 17
         }
@@ -109,7 +121,7 @@
         "query": "[data-page=\"home\"] .level-today .small-play",
         "rect": {
           "x": 319,
-          "y": 409.640625,
+          "y": 410.359375,
           "width": 40,
           "height": 40
         }
@@ -118,7 +130,7 @@
     "setup": null,
     "sourceId": "home",
     "state": "下方内容",
-    "scroll": 431,
+    "scroll": 478,
     "image": "screens/home-1.png"
   },
   {
@@ -130,14 +142,14 @@
     "annotations": [
       {
         "selector": ".member-banner button[data-member-paid]",
-        "title": "继续学习",
-        "desc": "点击继续上次课程；暂无学习记录时进入「等级频道」。",
+        "title": "探索课程",
+        "desc": "点击进入「等级频道」，浏览分级课程。",
         "query": "[data-page=\"home\"] .member-banner button[data-member-paid]",
         "rect": {
-          "x": 37,
-          "y": 277.09375,
-          "width": 128,
-          "height": 38
+          "x": 35,
+          "y": 324.28125,
+          "width": 105,
+          "height": 34
         }
       }
     ],
@@ -145,6 +157,58 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/home-paid-0.png"
+  },
+  {
+    "id": "home-banner-scene-0",
+    "page": "home",
+    "title": "首页 · 场景介绍",
+    "group": "学习入口",
+    "setup": "paid",
+    "bannerIndex": 1,
+    "annotations": [
+      {
+        "selector": ".banner-scene button",
+        "title": "看看场景",
+        "desc": "点击进入「场景频道」，了解日常会话课程。",
+        "query": "[data-page=\"home\"] .banner-scene button",
+        "rect": {
+          "x": 35,
+          "y": 324.28125,
+          "width": 105,
+          "height": 34
+        }
+      }
+    ],
+    "sourceId": "home-banner-scene",
+    "state": "页面概览",
+    "scroll": 0,
+    "image": "screens/home-banner-scene-0.png"
+  },
+  {
+    "id": "home-banner-podcast-0",
+    "page": "home",
+    "title": "首页 · 播客介绍",
+    "group": "学习入口",
+    "setup": "paid",
+    "bannerIndex": 2,
+    "annotations": [
+      {
+        "selector": ".banner-podcast button",
+        "title": "发现播客",
+        "desc": "点击进入「播客列表」，探索日语节目。",
+        "query": "[data-page=\"home\"] .banner-podcast button",
+        "rect": {
+          "x": 35,
+          "y": 324.28125,
+          "width": 105,
+          "height": 34
+        }
+      }
+    ],
+    "sourceId": "home-banner-podcast",
+    "state": "页面概览",
+    "scroll": 0,
+    "image": "screens/home-banner-podcast-0.png"
   },
   {
     "id": "course-0",
