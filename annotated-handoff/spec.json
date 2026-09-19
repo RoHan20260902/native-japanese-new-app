@@ -932,5 +932,29 @@
       }
     ],
     "setup": "sort"
+  },
+  {
+    "id": "rating",
+    "page": "home",
+    "title": "使用体验评分",
+    "group": "通用弹窗",
+    "setup": "rating",
+    "annotations": [
+      {
+        "selector": "GLOBAL .rating-modal > div > b",
+        "title": "弹出时机",
+        "desc": "本次会话第 6 次有效点击后弹出，\n每次会话仅展示一次。"
+      },
+      {
+        "selector": "GLOBAL .rating-stars",
+        "title": "选择星级",
+        "desc": "点击 1–5 星，点亮所选星级；\n约 0.4 秒后关闭，返回原页面。"
+      },
+      {
+        "selector": "GLOBAL [data-action=\"close-rating\"]",
+        "title": "稍后评价",
+        "desc": "关闭弹窗并返回原页面，\n本次会话不再提示。"
+      }
+    ]
   }
 ]

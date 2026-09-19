@@ -1971,5 +1971,54 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/sort-menu-0.png"
+  },
+  {
+    "id": "rating-0",
+    "page": "home",
+    "title": "使用体验评分",
+    "group": "通用弹窗",
+    "setup": "rating",
+    "annotations": [
+      {
+        "selector": "GLOBAL .rating-modal > div > b",
+        "title": "弹出时机",
+        "desc": "本次会话第 6 次有效点击后弹出，\n每次会话仅展示一次。",
+        "query": ".rating-modal > div > b",
+        "rect": {
+          "x": 53,
+          "y": 355.421875,
+          "width": 287,
+          "height": 28.75
+        }
+      },
+      {
+        "selector": "GLOBAL .rating-stars",
+        "title": "选择星级",
+        "desc": "点击 1–5 星，点亮所选星级；\n约 0.4 秒后关闭，返回原页面。",
+        "query": ".rating-stars",
+        "rect": {
+          "x": 53,
+          "y": 434.5625,
+          "width": 287,
+          "height": 46
+        }
+      },
+      {
+        "selector": "GLOBAL [data-action=\"close-rating\"]",
+        "title": "稍后评价",
+        "desc": "关闭弹窗并返回原页面，\n本次会话不再提示。",
+        "query": "[data-action=\"close-rating\"]",
+        "rect": {
+          "x": 53,
+          "y": 496.5625,
+          "width": 287,
+          "height": 44
+        }
+      }
+    ],
+    "sourceId": "rating",
+    "state": "页面概览",
+    "scroll": 0,
+    "image": "screens/rating-0.png"
   }
 ]
