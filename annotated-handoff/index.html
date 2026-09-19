@@ -22,9 +22,13 @@ try{
    editState.deleted=legacy.__deletedViews||[];
    for(const s of screens)if(Array.isArray(legacy[s.id])&&!equal(legacy[s.id],s.annotations.map(({uid,...a})=>a))){
     const old=legacy[s.id];
-    // Old files lack stable identities. Prefer title matching, then numeric identity.
-    for(const a of old)if(!a.uid){const match=s.annotations.find(b=>b.title===a.title)||s.annotations.find(b=>b.id===a.id);a.uid=match?.uid||('user-legacy-'+s.id+'-'+a.id);}
-    editState.pages[s.id]={legacy:old};
+    // Legacy snapshots may contain annotations removed by newer releases. Keep only
+    // entries that still match a current annotation by title; never restore old
+    // numeric positions or deleted callouts into the new baseline.
+    const currentTitles=new Set(s.annotations.map(b=>b.title));
+    const retained=old.filter(a=>currentTitles.has(a.title));
+    for(const a of retained)if(!a.uid){const match=s.annotations.find(b=>b.title===a.title);a.uid=match?.uid||('user-legacy-'+s.id+'-'+a.id);}
+    if(retained.length)editState.pages[s.id]={legacy:retained};
    }
    localStorage.setItem(key,JSON.stringify(editState));
   }
