@@ -9658,3 +9658,32 @@ body[data-member="paid"] .member-banner .home-banner-copy button { height:34px; 
 @media(prefers-reduced-motion:reduce){.home-banner-track{transition:none}}
 
 .home-banner-carousel { user-select: none; -webkit-user-select: none; }
+
+/* Restore the original vivid blue-green campaign artwork across all three slides. */
+.home-banner-slide.banner-course,
+.home-banner-slide.banner-scene,
+.home-banner-slide.banner-podcast {
+  background: radial-gradient(circle at 70% 22%, rgba(255,255,255,.28), transparent 22%),
+    linear-gradient(135deg, #20c986 0%, #16bdd3 54%, #2388ff 100%);
+}
+.member-banner .home-banner-copy h2,
+body[data-member="paid"] .member-banner .home-banner-copy h2 { color:#fff !important; text-shadow:0 2px 0 rgba(0,55,72,.22); }
+.member-banner .home-banner-kicker,
+.member-banner .home-banner-copy p { color:#073c46; }
+.member-banner .home-banner-copy button,
+body[data-member="paid"] .member-banner .home-banner-copy button { background:#ffe019; }
+.home-banner-slide .banner-art { position:absolute; inset:55px 0 30px auto; width:132px; pointer-events:none; }
+.home-banner-slide .shape.dots.left { left:-22px;bottom:3px;width:58px;height:36px; }
+.home-banner-slide .shape.plus.red { left:28px;top:2px;transform:rotate(12deg); }
+.home-banner-slide .shape.plus.yellow { right:14px;bottom:0;transform:rotate(12deg); }
+.home-banner-slide .shape.rect { right:76px;bottom:14px;transform:rotate(-12deg); }
+.home-banner-slide .shape.button-line { right:19px;top:30px;transform:rotate(9deg); }
+.home-banner-slide .shape.triangle { right:9px;top:10px;transform:rotate(9deg); }
+.home-banner-slide .shape.half { right:68px;top:32px;transform:rotate(-12deg); }
+.home-banner-slide .shape.bezier { left:7px;right:36px;bottom:-10px;height:24px; }
+.home-banner-slide .shape.dots.right { right:0;top:47px; }
+.banner-scene .shape.button-line { background:repeating-linear-gradient(-18deg,rgba(16,16,16,.16) 0 4px,transparent 4px 10px),#ffb6a8; }
+.banner-scene .shape.half:before { background:#ffe019; }
+.banner-podcast .shape.rect { background:#ffe019; }
+.banner-podcast .shape.half:before { background:#ffb6a8; }
+.member-banner .home-banner-count,.member-banner .home-banner-hint { color:#073c46; }
