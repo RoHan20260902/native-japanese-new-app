@@ -55,6 +55,8 @@
       applyingRemote = false;
       reloadQueued = true;
       setStatus('已收到共享版本，正在更新');
+      const menu = document.getElementById('screenSelect');
+      if (menu) sessionStorage.setItem('native-japanese-handoff-current-view', menu.value);
       window.setTimeout(() => window.location.reload(), 60);
     } catch (error) {
       console.warn('[handoff shared sync] pull failed', error);
