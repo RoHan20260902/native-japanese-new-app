@@ -62,3 +62,7 @@ base=base[:a]+'''document.getElementById('save').onclick=()=>{screens[current].a
 </script></body></html>'''
 (root/'index.html').write_text(base)
 print('Built',len(D),'views,',sum(len(x['annotations']) for x in D),'annotations;',round(len(base)/1024/1024,1),'MB')
+
+# Preserve page-deletion controls on regeneration.
+import runpy
+runpy.run_path(str(root/"add-page-delete.py"))
