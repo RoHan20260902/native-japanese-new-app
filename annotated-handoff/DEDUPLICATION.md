@@ -30,3 +30,5 @@
 - feature-adverbs-1
 - n3-lesson-detail-1
 - n2-lesson-detail-1
+
+追加规则：筛选排序只保留 course-0（用户本地 Page4）现有说明；移除独立 filter-menu-0、sort-menu-0，保留原截图备份及用户编辑保存键。

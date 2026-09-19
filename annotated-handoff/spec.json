@@ -906,34 +906,6 @@
     "setup": "playback"
   },
   {
-    "id": "filter-menu",
-    "page": "course",
-    "title": "课程筛选菜单",
-    "group": "弹窗与菜单",
-    "annotations": [
-      {
-        "selector": ".filter-menu",
-        "title": "选择学习状态",
-        "desc": "点击全部、未学习或已学习，筛选列表。"
-      }
-    ],
-    "setup": "filter"
-  },
-  {
-    "id": "sort-menu",
-    "page": "course",
-    "title": "课程排序菜单",
-    "group": "弹窗与菜单",
-    "annotations": [
-      {
-        "selector": ".sort-menu",
-        "title": "选择排列顺序",
-        "desc": "点击推荐、未学习优先或最近学习，重排列表。"
-      }
-    ],
-    "setup": "sort"
-  },
-  {
     "id": "rating",
     "page": "home",
     "title": "使用体验评分",

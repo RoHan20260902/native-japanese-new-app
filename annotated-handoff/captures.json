@@ -1923,56 +1923,6 @@
     "image": "screens/playback-0.png"
   },
   {
-    "id": "filter-menu-0",
-    "page": "course",
-    "title": "课程筛选菜单",
-    "group": "弹窗与菜单",
-    "annotations": [
-      {
-        "selector": ".filter-menu",
-        "title": "选择学习状态",
-        "desc": "点击全部、未学习或已学习，筛选列表。",
-        "query": "[data-page=\"course\"] .filter-menu",
-        "rect": {
-          "x": 137,
-          "y": 412,
-          "width": 152,
-          "height": 142
-        }
-      }
-    ],
-    "setup": "filter",
-    "sourceId": "filter-menu",
-    "state": "页面概览",
-    "scroll": 0,
-    "image": "screens/filter-menu-0.png"
-  },
-  {
-    "id": "sort-menu-0",
-    "page": "course",
-    "title": "课程排序菜单",
-    "group": "弹窗与菜单",
-    "annotations": [
-      {
-        "selector": ".sort-menu",
-        "title": "选择排列顺序",
-        "desc": "点击推荐、未学习优先或最近学习，重排列表。",
-        "query": "[data-page=\"course\"] .sort-menu",
-        "rect": {
-          "x": 225,
-          "y": 412,
-          "width": 152,
-          "height": 142
-        }
-      }
-    ],
-    "setup": "sort",
-    "sourceId": "sort-menu",
-    "state": "页面概览",
-    "scroll": 0,
-    "image": "screens/sort-menu-0.png"
-  },
-  {
     "id": "rating-0",
     "page": "home",
     "title": "使用体验评分",
