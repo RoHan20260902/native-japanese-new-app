@@ -202,30 +202,6 @@
     "group": "学习入口",
     "annotations": [
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"scene\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 368,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"scene\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 368,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
         "selector": "[data-go=\"scene-basic\"]",
         "title": "基础沟通",
         "desc": "点击进入「基础沟通」。",
@@ -250,30 +226,6 @@
     "title": "特集频道",
     "group": "学习入口",
     "annotations": [
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"feature\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 368,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"feature\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 368,
-          "width": 78,
-          "height": 36
-        }
-      },
       {
         "selector": "[data-go=\"feature-adverbs\"]",
         "title": "副词特集",
@@ -309,30 +261,6 @@
           "y": 28.796875,
           "width": 42,
           "height": 42
-        }
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"level-n5\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"level-n5\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
         }
       },
       {
@@ -408,54 +336,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"level-n4\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"level-n4\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"level-n4\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 302.203125,
-          "width": 85.765625,
-          "height": 30
-        }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"level-n4\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -463,31 +343,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/level-n4-0.png"
-  },
-  {
-    "id": "level-n4-1",
-    "page": "level-n4",
-    "title": "N4 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"level-n4\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 296.421875,
-          "width": 361,
-          "height": 181.609375
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "level-n4",
-    "state": "下方内容",
-    "scroll": 534,
-    "image": "screens/level-n4-1.png"
   },
   {
     "id": "level-n3-0",
@@ -508,42 +363,6 @@
         }
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"level-n3\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"level-n3\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"level-n3\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 302.203125,
-          "width": 101.0625,
-          "height": 30
-        }
-      },
-      {
         "selector": ".old-level-list article[data-go] h3",
         "title": "课程详情",
         "desc": "点击课程标题，进入「N3 课程详情」。",
@@ -554,18 +373,6 @@
           "width": 229.421875,
           "height": 25.609375
         }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"level-n3\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -573,31 +380,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/level-n3-0.png"
-  },
-  {
-    "id": "level-n3-1",
-    "page": "level-n3",
-    "title": "N3 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"level-n3\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 296.421875,
-          "width": 361,
-          "height": 181.609375
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "level-n3",
-    "state": "下方内容",
-    "scroll": 534,
-    "image": "screens/level-n3-1.png"
   },
   {
     "id": "level-n2-0",
@@ -618,42 +400,6 @@
         }
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"level-n2\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"level-n2\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"level-n2\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 302.203125,
-          "width": 146.0625,
-          "height": 30
-        }
-      },
-      {
         "selector": ".old-level-list article[data-go] h3",
         "title": "课程详情",
         "desc": "点击课程标题，进入「N2 课程详情」。",
@@ -664,18 +410,6 @@
           "width": 229.421875,
           "height": 25.609375
         }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"level-n2\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -683,31 +417,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/level-n2-0.png"
-  },
-  {
-    "id": "level-n2-1",
-    "page": "level-n2",
-    "title": "N2 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"level-n2\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 296.421875,
-          "width": 361,
-          "height": 181.609375
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "level-n2",
-    "state": "下方内容",
-    "scroll": 534,
-    "image": "screens/level-n2-1.png"
   },
   {
     "id": "level-n1-0",
@@ -728,42 +437,6 @@
         }
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"level-n1\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"level-n1\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"level-n1\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 302.203125,
-          "width": 131.0625,
-          "height": 30
-        }
-      },
-      {
         "selector": ".old-level-list article[data-go] h3",
         "title": "课程详情",
         "desc": "点击课程标题，进入「N1 课程详情」。",
@@ -774,18 +447,6 @@
           "width": 229.421875,
           "height": 25.609375
         }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"level-n1\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -793,31 +454,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/level-n1-0.png"
-  },
-  {
-    "id": "level-n1-1",
-    "page": "level-n1",
-    "title": "N1 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"level-n1\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 296.421875,
-          "width": 361,
-          "height": 181.609375
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "level-n1",
-    "state": "下方内容",
-    "scroll": 534,
-    "image": "screens/level-n1-1.png"
   },
   {
     "id": "level-native-0",
@@ -836,54 +472,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"level-native\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"level-native\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"level-native\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 327.8125,
-          "width": 116.0625,
-          "height": 30
-        }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"level-native\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -891,31 +479,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/level-native-0.png"
-  },
-  {
-    "id": "level-native-1",
-    "page": "level-native",
-    "title": "NT 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"level-native\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 283.03125,
-          "width": 361,
-          "height": 207.21875
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "level-native",
-    "state": "下方内容",
-    "scroll": 573,
-    "image": "screens/level-native-1.png"
   },
   {
     "id": "scene-basic-0",
@@ -934,54 +497,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"scene-basic\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"scene-basic\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"scene-basic\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 302.203125,
-          "width": 161.0625,
-          "height": 30
-        }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"scene-basic\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -989,31 +504,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/scene-basic-0.png"
-  },
-  {
-    "id": "scene-basic-1",
-    "page": "scene-basic",
-    "title": "基础沟通 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"scene-basic\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 296.421875,
-          "width": 361,
-          "height": 181.609375
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "scene-basic",
-    "state": "下方内容",
-    "scroll": 534,
-    "image": "screens/scene-basic-1.png"
   },
   {
     "id": "feature-adverbs-0",
@@ -1032,54 +522,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"feature-adverbs\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"feature-adverbs\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 195.59375,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。",
-        "query": "[data-page=\"feature-adverbs\"] .old-level-list article:not(.member-locked) p",
-        "rect": {
-          "x": 91,
-          "y": 302.203125,
-          "width": 101.0625,
-          "height": 30
-        }
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"feature-adverbs\"] .level-list-head [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 117.59375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": null,
@@ -1087,31 +529,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/feature-adverbs-0.png"
-  },
-  {
-    "id": "feature-adverbs-1",
-    "page": "feature-adverbs",
-    "title": "副词特集 课程列表",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。",
-        "query": "[data-page=\"feature-adverbs\"] .old-level-list article.member-locked",
-        "rect": {
-          "x": 16,
-          "y": 296.421875,
-          "width": 361,
-          "height": 181.609375
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "feature-adverbs",
-    "state": "下方内容",
-    "scroll": 534,
-    "image": "screens/feature-adverbs-1.png"
   },
   {
     "id": "lesson-detail-0",
@@ -1141,18 +558,6 @@
           "y": 22,
           "width": 42,
           "height": 42
-        }
-      },
-      {
-        "selector": ".grammar-tag-row span",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。",
-        "query": "[data-page=\"lesson-detail\"] .grammar-tag-row span",
-        "rect": {
-          "x": 37,
-          "y": 195.84375,
-          "width": 104.921875,
-          "height": 32
         }
       },
       {
@@ -1264,66 +669,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-action=\"favorite-lesson\"]",
-        "title": "收藏课程",
-        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。",
-        "query": "[data-page=\"n3-lesson-detail\"] [data-action=\"favorite-lesson\"]",
-        "rect": {
-          "x": 335,
-          "y": 22,
-          "width": 42,
-          "height": 42
-        }
-      },
-      {
-        "selector": ".grammar-tag-row span",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。",
-        "query": "[data-page=\"n3-lesson-detail\"] .grammar-tag-row span",
-        "rect": {
-          "x": 37,
-          "y": 195.84375,
-          "width": 84,
-          "height": 32
-        }
-      },
-      {
-        "selector": ".lesson-summary-card [data-action=\"play\"]",
-        "title": "播放该课程",
-        "desc": "点击播放该课程音频。",
-        "query": "[data-page=\"n3-lesson-detail\"] .lesson-summary-card [data-action=\"play\"]",
-        "rect": {
-          "x": 263.25,
-          "y": 296.84375,
-          "width": 92.75,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".dialogue-list button:not([data-action])",
-        "title": "跟读录音",
-        "desc": "按住开始录音，松开结束。",
-        "query": "[data-page=\"n3-lesson-detail\"] .dialogue-list button:not([data-action])",
-        "rect": {
-          "x": 188.984375,
-          "y": 496.84375,
-          "width": 60,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
-        "title": "句子播放",
-        "desc": "点击仅播放该句音频。",
-        "query": "[data-page=\"n3-lesson-detail\"] .dialogue-list .bubble:first-child [data-action=\"play\"]",
-        "rect": {
-          "x": 104,
-          "y": 496.84375,
-          "width": 76.984375,
-          "height": 36
-        }
       }
     ],
     "setup": null,
@@ -1331,43 +676,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/n3-lesson-detail-0.png"
-  },
-  {
-    "id": "n3-lesson-detail-1",
-    "page": "n3-lesson-detail",
-    "title": "N3 · 出来上がる",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".lesson-bottom-actions button:first-child",
-        "title": "上一课",
-        "desc": "点击切换至当前对应列表的相邻上一课。",
-        "query": "[data-page=\"n3-lesson-detail\"] .lesson-bottom-actions button:first-child",
-        "rect": {
-          "x": 18,
-          "y": 596.03125,
-          "width": 103.6875,
-          "height": 48
-        }
-      },
-      {
-        "selector": ".lesson-bottom-actions button:last-child",
-        "title": "下一课",
-        "desc": "点击切换至当前对应列表的相邻下一课。",
-        "query": "[data-page=\"n3-lesson-detail\"] .lesson-bottom-actions button:last-child",
-        "rect": {
-          "x": 271.296875,
-          "y": 596.03125,
-          "width": 103.703125,
-          "height": 48
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "n3-lesson-detail",
-    "state": "下方内容",
-    "scroll": 441,
-    "image": "screens/n3-lesson-detail-1.png"
   },
   {
     "id": "n2-lesson-detail-0",
@@ -1386,66 +694,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-action=\"favorite-lesson\"]",
-        "title": "收藏课程",
-        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。",
-        "query": "[data-page=\"n2-lesson-detail\"] [data-action=\"favorite-lesson\"]",
-        "rect": {
-          "x": 335,
-          "y": 22,
-          "width": 42,
-          "height": 42
-        }
-      },
-      {
-        "selector": ".grammar-tag-row span",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。",
-        "query": "[data-page=\"n2-lesson-detail\"] .grammar-tag-row span",
-        "rect": {
-          "x": 37,
-          "y": 195.84375,
-          "width": 123,
-          "height": 32
-        }
-      },
-      {
-        "selector": ".lesson-summary-card [data-action=\"play\"]",
-        "title": "播放该课程",
-        "desc": "点击播放该课程音频。",
-        "query": "[data-page=\"n2-lesson-detail\"] .lesson-summary-card [data-action=\"play\"]",
-        "rect": {
-          "x": 263.25,
-          "y": 296.84375,
-          "width": 92.75,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".dialogue-list button:not([data-action])",
-        "title": "跟读录音",
-        "desc": "按住开始录音，松开结束。",
-        "query": "[data-page=\"n2-lesson-detail\"] .dialogue-list button:not([data-action])",
-        "rect": {
-          "x": 188.984375,
-          "y": 524.4375,
-          "width": 60,
-          "height": 36
-        }
-      },
-      {
-        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
-        "title": "句子播放",
-        "desc": "点击仅播放该句音频。",
-        "query": "[data-page=\"n2-lesson-detail\"] .dialogue-list .bubble:first-child [data-action=\"play\"]",
-        "rect": {
-          "x": 104,
-          "y": 524.4375,
-          "width": 76.984375,
-          "height": 36
-        }
       }
     ],
     "setup": null,
@@ -1453,43 +701,6 @@
     "state": "页面概览",
     "scroll": 0,
     "image": "screens/n2-lesson-detail-0.png"
-  },
-  {
-    "id": "n2-lesson-detail-1",
-    "page": "n2-lesson-detail",
-    "title": "N2 · 力の限り走る",
-    "group": "课程与语法",
-    "annotations": [
-      {
-        "selector": ".lesson-bottom-actions button:first-child",
-        "title": "上一课",
-        "desc": "点击切换至当前对应列表的相邻上一课。",
-        "query": "[data-page=\"n2-lesson-detail\"] .lesson-bottom-actions button:first-child",
-        "rect": {
-          "x": 18,
-          "y": 595.625,
-          "width": 103.6875,
-          "height": 48
-        }
-      },
-      {
-        "selector": ".lesson-bottom-actions button:last-child",
-        "title": "下一课",
-        "desc": "点击切换至当前对应列表的相邻下一课。",
-        "query": "[data-page=\"n2-lesson-detail\"] .lesson-bottom-actions button:last-child",
-        "rect": {
-          "x": 271.296875,
-          "y": 595.625,
-          "width": 103.703125,
-          "height": 48
-        }
-      }
-    ],
-    "setup": null,
-    "sourceId": "n2-lesson-detail",
-    "state": "下方内容",
-    "scroll": 469,
-    "image": "screens/n2-lesson-detail-1.png"
   },
   {
     "id": "grammar-examples-0",
@@ -1508,18 +719,6 @@
           "width": 42,
           "height": 42
         }
-      },
-      {
-        "selector": "[data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"grammar-examples\"] [data-action=\"play\"]",
-        "rect": {
-          "x": 260,
-          "y": 258.609375,
-          "width": 98,
-          "height": 42
-        }
       }
     ],
     "setup": "grammar",
@@ -1534,30 +733,6 @@
     "title": "播客列表",
     "group": "播客与收藏",
     "annotations": [
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"podcast\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 245.40625,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"podcast\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 245.40625,
-          "width": 78,
-          "height": 36
-        }
-      },
       {
         "selector": "[data-podcast=\"0\"] h3",
         "title": "节目详情",
@@ -1580,18 +755,6 @@
           "y": 603.40625,
           "width": 361,
           "height": 92
-        }
-      },
-      {
-        "selector": ".podcast-progress-hero button",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。",
-        "query": "[data-page=\"podcast\"] .podcast-progress-hero button",
-        "rect": {
-          "x": 254,
-          "y": 132,
-          "width": 104,
-          "height": 42
         }
       }
     ],
@@ -1657,30 +820,6 @@
         }
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。",
-        "query": "[data-page=\"favorite\"] [data-tool=\"filter\"]",
-        "rect": {
-          "x": 213,
-          "y": 347.46875,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。",
-        "query": "[data-page=\"favorite\"] [data-tool=\"sort\"]",
-        "rect": {
-          "x": 299,
-          "y": 347.46875,
-          "width": 78,
-          "height": 36
-        }
-      },
-      {
         "selector": ".lesson-favorite-item h3",
         "title": "复习课程",
         "desc": "点击进入该主题课程。",
@@ -1690,18 +829,6 @@
           "y": 418.46875,
           "width": 229.421875,
           "height": 25.609375
-        }
-      },
-      {
-        "selector": ".favorite-course-card p b",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。",
-        "query": "[data-page=\"favorite\"] .favorite-course-card p b",
-        "rect": {
-          "x": 91,
-          "y": 456.078125,
-          "width": 131.0625,
-          "height": 30
         }
       }
     ],
@@ -2295,18 +1422,6 @@
     "group": "账号",
     "annotations": [
       {
-        "selector": ".auth-tabs",
-        "title": "账号方式",
-        "desc": "点击切换选中方式；输入字段保持不变。",
-        "query": "[data-page=\"register\"] .auth-tabs",
-        "rect": {
-          "x": 24,
-          "y": 308,
-          "width": 345,
-          "height": 72
-        }
-      },
-      {
         "selector": "input",
         "title": "填写账号",
         "desc": "输入当前字段所需的账号信息。",
@@ -2315,18 +1430,6 @@
           "x": 24,
           "y": 433,
           "width": 345,
-          "height": 54
-        }
-      },
-      {
-        "selector": "input[type=\"password\"]",
-        "title": "填写密码",
-        "desc": "输入密码。",
-        "query": "[data-page=\"register\"] input[type=\"password\"]",
-        "rect": {
-          "x": 24,
-          "y": 534,
-          "width": 281,
           "height": 54
         }
       },
@@ -2437,30 +1540,6 @@
           "x": 24,
           "y": 513,
           "width": 281,
-          "height": 54
-        }
-      },
-      {
-        "selector": "[data-go=\"verify-code-sent\"]",
-        "title": "获取验证码",
-        "desc": "点击进入「验证码已发送」。",
-        "query": "[data-page=\"forgot-password\"] [data-go=\"verify-code-sent\"]",
-        "rect": {
-          "x": 251,
-          "y": 412,
-          "width": 118,
-          "height": 54
-        }
-      },
-      {
-        "selector": "input[placeholder=\"请输入验证码\"]",
-        "title": "填写验证码",
-        "desc": "输入验证码。",
-        "query": "[data-page=\"forgot-password\"] input[placeholder=\"请输入验证码\"]",
-        "rect": {
-          "x": 24,
-          "y": 412,
-          "width": 217,
           "height": 54
         }
       },

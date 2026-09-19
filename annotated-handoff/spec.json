@@ -108,16 +108,6 @@
     "group": "学习入口",
     "annotations": [
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
         "selector": "[data-go=\"scene-basic\"]",
         "title": "基础沟通",
         "desc": "点击进入「基础沟通」。"
@@ -131,16 +121,6 @@
     "title": "特集频道",
     "group": "学习入口",
     "annotations": [
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
       {
         "selector": "[data-go=\"feature-adverbs\"]",
         "title": "副词特集",
@@ -159,16 +139,6 @@
         "selector": "[data-go=\"course\"]",
         "title": "返回",
         "desc": "点击返回「等级频道」。"
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
       },
       {
         "selector": ".old-level-list article:not(.member-locked) p",
@@ -198,31 +168,6 @@
         "selector": "[data-go=\"course\"]",
         "title": "返回",
         "desc": "点击返回「等级频道」。"
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -239,34 +184,9 @@
         "desc": "点击返回「等级频道」。"
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
         "selector": ".old-level-list article[data-go] h3",
         "title": "课程详情",
         "desc": "点击课程标题，进入「N3 课程详情」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -283,34 +203,9 @@
         "desc": "点击返回「等级频道」。"
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
         "selector": ".old-level-list article[data-go] h3",
         "title": "课程详情",
         "desc": "点击课程标题，进入「N2 课程详情」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -327,34 +222,9 @@
         "desc": "点击返回「等级频道」。"
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
         "selector": ".old-level-list article[data-go] h3",
         "title": "课程详情",
         "desc": "点击课程标题，进入「N1 课程详情」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -369,31 +239,6 @@
         "selector": "[data-go=\"course\"]",
         "title": "返回",
         "desc": "点击返回「等级频道」。"
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -408,31 +253,6 @@
         "selector": "[data-go=\"scene\"]",
         "title": "返回",
         "desc": "点击返回「场景频道」。"
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -447,31 +267,6 @@
         "selector": "[data-go=\"feature\"]",
         "title": "返回",
         "desc": "点击返回「特集频道」。"
-      },
-      {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
-        "selector": ".old-level-list article:not(.member-locked) p",
-        "title": "语法关联",
-        "desc": "点击语法标签，打开对应的「关联课程」。"
-      },
-      {
-        "selector": ".old-level-list article.member-locked",
-        "title": "解锁课程",
-        "desc": "点击带锁课程任一位置，进入「会员购买页面」。"
-      },
-      {
-        "selector": ".level-list-head [data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -491,11 +286,6 @@
         "selector": "[data-action=\"favorite-lesson\"]",
         "title": "收藏课程",
         "desc": "点击收藏，爱心变红，课程加入「收藏」频道。"
-      },
-      {
-        "selector": ".grammar-tag-row span",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。"
       },
       {
         "selector": ".lesson-summary-card [data-action=\"play\"]",
@@ -540,41 +330,6 @@
         "selector": "[data-go=\"level-n3\"]",
         "title": "返回",
         "desc": "点击返回「N3 频道」。"
-      },
-      {
-        "selector": "[data-action=\"favorite-lesson\"]",
-        "title": "收藏课程",
-        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。"
-      },
-      {
-        "selector": ".grammar-tag-row span",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。"
-      },
-      {
-        "selector": ".lesson-summary-card [data-action=\"play\"]",
-        "title": "播放该课程",
-        "desc": "点击播放该课程音频。"
-      },
-      {
-        "selector": ".dialogue-list button:not([data-action])",
-        "title": "跟读录音",
-        "desc": "按住开始录音，松开结束。"
-      },
-      {
-        "selector": ".lesson-bottom-actions button:first-child",
-        "title": "上一课",
-        "desc": "点击切换至当前对应列表的相邻上一课。"
-      },
-      {
-        "selector": ".lesson-bottom-actions button:last-child",
-        "title": "下一课",
-        "desc": "点击切换至当前对应列表的相邻下一课。"
-      },
-      {
-        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
-        "title": "句子播放",
-        "desc": "点击仅播放该句音频。"
       }
     ],
     "setup": null
@@ -589,41 +344,6 @@
         "selector": "[data-go=\"level-n2\"]",
         "title": "返回",
         "desc": "点击返回「N2 频道」。"
-      },
-      {
-        "selector": "[data-action=\"favorite-lesson\"]",
-        "title": "收藏课程",
-        "desc": "点击收藏，爱心变红，课程加入「收藏」频道。"
-      },
-      {
-        "selector": ".grammar-tag-row span",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。"
-      },
-      {
-        "selector": ".lesson-summary-card [data-action=\"play\"]",
-        "title": "播放该课程",
-        "desc": "点击播放该课程音频。"
-      },
-      {
-        "selector": ".dialogue-list button:not([data-action])",
-        "title": "跟读录音",
-        "desc": "按住开始录音，松开结束。"
-      },
-      {
-        "selector": ".lesson-bottom-actions button:first-child",
-        "title": "上一课",
-        "desc": "点击切换至当前对应列表的相邻上一课。"
-      },
-      {
-        "selector": ".lesson-bottom-actions button:last-child",
-        "title": "下一课",
-        "desc": "点击切换至当前对应列表的相邻下一课。"
-      },
-      {
-        "selector": ".dialogue-list .bubble:first-child [data-action=\"play\"]",
-        "title": "句子播放",
-        "desc": "点击仅播放该句音频。"
       }
     ],
     "setup": null
@@ -638,11 +358,6 @@
         "selector": "[data-action=\"grammar-back\"]",
         "title": "返回",
         "desc": "返回原来课程详情或列表页面"
-      },
-      {
-        "selector": "[data-action=\"play\"]",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": "grammar"
@@ -654,16 +369,6 @@
     "group": "播客与收藏",
     "annotations": [
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
         "selector": "[data-podcast=\"0\"] h3",
         "title": "节目详情",
         "desc": "点击标题，进入对应的播客详情。"
@@ -672,11 +377,6 @@
         "selector": "article.member-locked",
         "title": "解锁节目",
         "desc": "点击带锁节目，进入「会员购买」。"
-      },
-      {
-        "selector": ".podcast-progress-hero button",
-        "title": "全部播放",
-        "desc": "点击播放全部音频，并弹出播放浮窗。上部为音频条，下部显示对应播放内容。"
       }
     ],
     "setup": null
@@ -712,24 +412,9 @@
         "desc": "点击切换课程收藏与播客收藏。"
       },
       {
-        "selector": "[data-tool=\"filter\"]",
-        "title": "筛选课程",
-        "desc": "点击展开菜单，按学习状态筛选。"
-      },
-      {
-        "selector": "[data-tool=\"sort\"]",
-        "title": "调整排序",
-        "desc": "点击展开菜单，选择推荐或学习顺序。"
-      },
-      {
         "selector": ".lesson-favorite-item h3",
         "title": "复习课程",
         "desc": "点击进入该主题课程。"
-      },
-      {
-        "selector": ".favorite-course-card p b",
-        "title": "语法关联",
-        "desc": "点击打开该语法的「关联课程」。"
       }
     ],
     "setup": null
@@ -1001,19 +686,9 @@
     "group": "账号",
     "annotations": [
       {
-        "selector": ".auth-tabs",
-        "title": "账号方式",
-        "desc": "点击切换选中方式；输入字段保持不变。"
-      },
-      {
         "selector": "input",
         "title": "填写账号",
         "desc": "输入当前字段所需的账号信息。"
-      },
-      {
-        "selector": "input[type=\"password\"]",
-        "title": "填写密码",
-        "desc": "输入密码。"
       },
       {
         "selector": "input[placeholder=\"请输入验证码\"]",
@@ -1058,16 +733,6 @@
         "selector": "input[type=\"password\"]",
         "title": "填写密码",
         "desc": "输入新密码。"
-      },
-      {
-        "selector": "[data-go=\"verify-code-sent\"]",
-        "title": "获取验证码",
-        "desc": "点击进入「验证码已发送」。"
-      },
-      {
-        "selector": "input[placeholder=\"请输入验证码\"]",
-        "title": "填写验证码",
-        "desc": "输入验证码。"
       },
       {
         "selector": ".auth-primary",
