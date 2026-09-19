@@ -66,3 +66,5 @@ print('Built',len(D),'views,',sum(len(x['annotations']) for x in D),'annotations
 # Preserve page-deletion controls on regeneration.
 import runpy
 runpy.run_path(str(root/"add-page-delete.py"))
+
+runpy.run_path(str(root/"apply-persistent-edits.py"))
